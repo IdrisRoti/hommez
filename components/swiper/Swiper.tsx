@@ -75,7 +75,7 @@ export default function SwiperCarousel() {
                 onDragEnd={onDragEnd}
                 className='flex items-center rounded-[20px] h-52 sm:h-[22rem] w-full cursor-grab active:cursor-grabbing'> 
                     {
-                        heroCarouselHomeImages.map((url, i)=>(
+                        heroCarouselHomeImages.map((url)=>(
                             <div className='h-full w-full shrink-0 scale-[98%]' key={url}>
                                 <Image 
                                     className='object-cover pointer-events-none h-full w-full rounded-[20px]' 
