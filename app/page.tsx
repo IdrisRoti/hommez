@@ -1,6 +1,7 @@
 import Customers from "@/components/landing/Customers";
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
+import TrustedBy from "@/components/landing/TrustedBy";
 
 export default function Home() {
   return (
@@ -8,7 +9,10 @@ export default function Home() {
       <div className="h-[120rem] lg:h-[113rem] w-full absolute -top-[60rem] sm:-top-[48rem] lg:-top-[57rem] -z-10 rounded-full bg-gradient-to-b from-white from-50% to-secondary opacity-30" />
         <Header />
         <Hero />
-        <Customers />
+        <div className="flex flex-col">
+          <Customers />
+          <TrustedBy />
+        </div>
       </div>
   );
 }

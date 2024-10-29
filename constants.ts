@@ -40,3 +40,18 @@ export const searchTypeTabs = [
 export const heroCarouselHomeImages = ["/home1.jpg", "/home2.jpg", "/home3.jpg", "/home4.jpg"]
 
 export const happyCustormersImages = ["/customer1.jfif", "/customer2.jfif", "/customer3.jfif", "/customer4.jfif", "/customer5.jfif", "/customer6.jfif"]
+
+export const trustedByLogos = [
+    "/google.png",
+    "/amazon.png",
+    "/logitech.png",
+    "/spotify.png",
+    "/samsung.png",
+    "/netflix.png",
+    "/google.png",
+    "/amazon.png",
+    "/logitech.png",
+    "/spotify.png",
+    "/samsung.png",
+    "/netflix.png",
+]

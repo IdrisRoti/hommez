@@ -4,7 +4,7 @@ import { BiPlus } from 'react-icons/bi'
 
 export default function Customers() {
   return (
-    <section className='contain flex flex-col sm:flex-row justify-center items-center mt-10 gap-8'>
+    <section className='w-full contain flex flex-col sm:flex-row justify-center items-center mt-4 sm:mt-10 gap-8'>
         <div className='h-24 w-full sm:w-[22.5rem] bg-white rounded-full flex items-center justify-center gap-3 boxShadow'>
             <div className='flex items-center relative'>
                 {

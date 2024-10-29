@@ -22,9 +22,9 @@ body {
 }
 
 .contain {
-  @apply max-w-[75rem] mx-auto p-5;
+  @apply max-w-[75rem] mx-auto p-6;
 }
 
 .boxShadow {
-  box-shadow: 0px 20px 50px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 20px 50px 30px rgba(0, 0, 0, 0.05);
 }
