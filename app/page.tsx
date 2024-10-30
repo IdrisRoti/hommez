@@ -2,6 +2,7 @@ import About from "@/components/landing/About";
 import Customers from "@/components/landing/Customers";
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
+import Listings from "@/components/landing/Listings";
 import TrustedBy from "@/components/landing/TrustedBy";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
           <TrustedBy />
         </div>
         <About />
+        <Listings />
     </div>
   );
 }

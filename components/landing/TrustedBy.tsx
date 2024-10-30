@@ -10,7 +10,7 @@ import GradientBall from "../gradient-ball";
 export default function TrustedBy() {
   return (
     <section className="contain mt-[1rem] sm:mt-[5rem] relative w-full max-sm:-order-1">
-        <h3 className="text-textlight mb-10 sm:mb-14 text-center w-[60%] sm:w-full mx-auto">Trusted by 100+ Companies across the globe! </h3>
+        <h3 className="text-textlight mb-10 sm:mb-14 text-center w-[60%] sm:w-full mx-auto text-sm sm:text-base">Trusted by 100+ Companies across the globe! </h3>
         <div className="w-full flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
             <motion.div
                 initial={{ translateX: "-50%"}}
