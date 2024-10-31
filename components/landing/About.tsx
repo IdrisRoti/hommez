@@ -5,7 +5,7 @@ import AboutUsCards from "./AboutUsCards";
 export default function About() {
   return (
     <section className="contain mt-14 md:mt-32">
-        <h2 className="text-secondary text-lg md:text-xl mb-2 md:mb-6 md:text-center lg:text-left">WHO ARE WE</h2>
+        <h2 className="text-secondary text-lg md:text-xl mb-2 md:mb-6 md:text-center lg:text-left font-medium tracking-wide ">WHO ARE WE</h2>
         <div className="flex flex-col lg:flex-row gap-10">
             <div className="w-full lg:w-[45%] md:text-center lg:text-left">
                 <h3 className="mb-3 md:mb-5 font-semibold text-2xl md:text-4xl md:w-[60%] lg:w-full md:mx-auto lg:text-left">Assisting individuals in locating the appropriate real estate.</h3>

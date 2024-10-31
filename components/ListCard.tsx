@@ -10,12 +10,12 @@ export default function ListCard() {
   return (
     <article>
         <Link className="" href="/">
-            <div className="relative overflow-hidden h-[13.75rem] sm:h-[21.25rem] sm:w-[21.25rem] rounded-[1.875rem]">
+            <div className="relative overflow-hidden h-[13.75rem] sm:h-[21.25rem] sm:w-[21.25rem] rounded-[1.25rem] md:rounded-[1.875rem]">
                 <Image
                     src="/home4.jpg" 
                     alt=""
                     fill
-                    className="object-cover hover:scale-110 transition"
+                    className="object-cover hover:scale-110 transition duration-500"
                 />
                 <div className="flex items-center gap-2 bg-lightRed text-darkRed px-6 py-2.5 rounded-[1.25rem] absolute bottom-6 left-6 font-medium">
                     <FaFireFlameCurved className="size-4 sm:size-6" />

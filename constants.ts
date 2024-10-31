@@ -80,3 +80,36 @@ export const services = [
         icon: LuBed,
     },
 ]
+
+export const locationsArr = [
+    {
+        id: 1,
+        image: "/home2.jpg",
+        amount: 216,
+        location: "New York City, NY",
+    },
+    {
+        id: 2,
+        image: "/home2.jpg",
+        amount: 141,
+        location: "Houston, TX",
+    },
+    {
+        id: 3,
+        image: "/home2.jpg",
+        amount: 212,
+        location: "San Diego, CA",
+    },
+    {
+        id: 4,
+        image: "/home2.jpg",
+        amount: 183,
+        location: "Philadelphia, PA",
+    },
+    {
+        id: 5,
+        image: "/home2.jpg",
+        amount: 112,
+        location: "San Francisco, CA",
+    },
+]
