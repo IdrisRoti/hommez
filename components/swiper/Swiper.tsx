@@ -8,7 +8,7 @@ import { heroCarouselHomeImages } from '@/constants'
 import { motion, useMotionValue } from 'framer-motion'
 import { CgChevronLeft, CgChevronRight } from 'react-icons/cg'
 
-const DRAG_BUFFER = 50;
+const DRAG_BUFFER = 20;
 const SWIPE_AUTO_DELAY = 5000;
 
 export default function SwiperCarousel() {
@@ -122,5 +122,3 @@ export default function SwiperCarousel() {
 
   )
 }
-
-// w-[34rem] h-[21rem] relative overflow-hidden rounded-[20px]

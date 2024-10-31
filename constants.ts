@@ -1,3 +1,7 @@
+import { BsSearch } from "react-icons/bs";
+import { GoHomeFill } from "react-icons/go";
+import { LuBed } from "react-icons/lu";
+
 export const NavLinks = [
     {
         id: 1,
@@ -54,4 +58,25 @@ export const trustedByLogos = [
     "/spotify.png",
     "/samsung.png",
     "/netflix.png",
+]
+
+export const services = [
+    {
+        id: 1,
+        title: "Buy a New Home",
+        content: "Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.",
+        icon: BsSearch,
+    },
+    {
+        id: 2,
+        title: "Sell a House",
+        content: "Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.",
+        icon: GoHomeFill,
+    },
+    {
+        id: 3,
+        title: "Rent a House",
+        content: "Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.",
+        icon: LuBed,
+    },
 ]

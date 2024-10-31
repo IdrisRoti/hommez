@@ -3,6 +3,7 @@ import Customers from "@/components/landing/Customers";
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
 import Listings from "@/components/landing/Listings";
+import Services from "@/components/landing/Services";
 import TrustedBy from "@/components/landing/TrustedBy";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         </div>
         <About />
         <Listings />
+        <Services />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import ListCard from '../ListCard'
 
 export default function Listings() {
   return (
-    <section className='contain mt-14 md:mt-32 pb-20'>
+    <section className='contain mt-14 md:mt-32'>
         <div className='flex flex-col sm:flex-row items-center justify-between mb-5'>
             <div className='flex flex-col gap-2 w-full'>
                 <h2 className="text-secondary text-lg md:text-xl">CHECKOUT OUR NEW</h2>
@@ -25,7 +25,7 @@ export default function Listings() {
             <ListCard />
             <ListCard />
         </div>
-        <Link href="/" className='mt-8 block w-fit mx-auto px-8 py-3 hover:bg-primary hover:text-white transition sm:py-5 rounded-[1.875rem] text-primary border border-primary font-medium'>View more properties</Link>
+        <Link href="/" className='mt-8 mb-20 md:mb-28 block w-fit mx-auto px-8 py-3 hover:bg-primary hover:text-white transition sm:py-5 rounded-[1.875rem] text-primary border border-primary font-medium'>View more properties</Link>
     </section>
   )
 }
