@@ -56,7 +56,7 @@ export default function Locations() {
                 locationsArr.map((location) => (
                     <div 
                         key={location.id} 
-                        className="relative w-full h-[9.7rem] rounded-[1.25rem] overflow-hidden after:bg-gradient-to-t after:from-[rgba(0,0,0,.6)]  after:absolute after:inset-0 group">
+                        className="relative w-full h-[9.7rem] rounded-[1.25rem] overflow-hidden after:bg-gradient-to-t after:from-[rgba(0,0,0,.6)] after:absolute after:inset-0 group">
                         <Image
                             src={location.image} 
                             alt={location.location}

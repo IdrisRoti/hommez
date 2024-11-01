@@ -113,3 +113,30 @@ export const locationsArr = [
         location: "San Francisco, CA",
     },
 ]
+
+export const teamExperts = [
+    {
+        id: 1, 
+        name: "Brendon M",
+        title: "CEO & Founder",
+        image: "/home1.jpg"
+    },
+    {
+        id: 2, 
+        name: "Jodi J. Appleby",
+        title: "Real Estate Developer",
+        image: "/home1.jpg"
+    },
+    {
+        id: 3, 
+        name: "Justin S. Meza",
+        title: "Listing Agent",
+        image: "/home1.jpg"
+    },
+    {
+        id: 4, 
+        name: "Susan T. Smith",
+        title: "Buyer's Agent",
+        image: "/home1.jpg"
+    },
+]

@@ -11,7 +11,7 @@ import { CgChevronLeft, CgChevronRight } from 'react-icons/cg'
 const DRAG_BUFFER = 20;
 const SWIPE_AUTO_DELAY = 5000;
 
-export default function SwiperCarousel() {
+export default function HeroSwiperCarousel() {
     const [slideIndex, setSlideIndex] = useState(0)
     const [dragging, setDragging] = useState(false)
 
