@@ -43,7 +43,7 @@ export const searchTypeTabs = [
 
 export const heroCarouselHomeImages = ["/home1.jpg", "/home2.jpg", "/home3.jpg", "/home4.jpg"]
 
-export const happyCustormersImages = ["/customer1.jfif", "/customer2.jfif", "/customer3.jfif", "/customer4.jfif", "/customer5.jfif", "/customer6.jfif"]
+export const happyCustormersImages = ["/customer1.jpg", "/customer2.jpg", "/customer3.jpg", "/customer4.jpg", "/customer5.jpg", "/customer6.jpg"]
 
 export const trustedByLogos = [
     "/google.png",
@@ -84,31 +84,31 @@ export const services = [
 export const locationsArr = [
     {
         id: 1,
-        image: "/home2.jpg",
+        image: "/location1.jpg",
         amount: 216,
         location: "New York City, NY",
     },
     {
         id: 2,
-        image: "/home2.jpg",
+        image: "/location2.jpg",
         amount: 141,
         location: "Houston, TX",
     },
     {
         id: 3,
-        image: "/home2.jpg",
+        image: "/location3.jpg",
         amount: 212,
         location: "San Diego, CA",
     },
     {
         id: 4,
-        image: "/home2.jpg",
+        image: "/location4.jpg",
         amount: 183,
         location: "Philadelphia, PA",
     },
     {
         id: 5,
-        image: "/home2.jpg",
+        image: "/location5.jpg",
         amount: 112,
         location: "San Francisco, CA",
     },
@@ -119,24 +119,24 @@ export const teamExperts = [
         id: 1, 
         name: "Brendon M",
         title: "CEO & Founder",
-        image: "/home1.jpg"
+        image: "/customer2.jpg"
     },
     {
         id: 2, 
         name: "Jodi J. Appleby",
         title: "Real Estate Developer",
-        image: "/home1.jpg"
+        image: "/customer4.jpg"
     },
     {
         id: 3, 
         name: "Justin S. Meza",
         title: "Listing Agent",
-        image: "/home1.jpg"
+        image: "/customer3.jpg"
     },
     {
         id: 4, 
         name: "Susan T. Smith",
         title: "Buyer's Agent",
-        image: "/home1.jpg"
+        image: "/customer5.jpg"
     },
 ]
