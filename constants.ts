@@ -140,3 +140,24 @@ export const teamExperts = [
         image: "/customer5.jpg"
     },
 ]
+
+export const testimonials = [
+    {
+        id: 1,
+        comment: "I highly recommend Jodi J. Appleby. She was attentive to our needs and worked tirelessly to find us the perfect home. We couldn't be happier with our new place!",
+        name: "Barbara D. Smith",
+        image: "/customer2.jpg"
+    },
+    {
+        id: 2,
+        comment: "I highly recommend Jodi J. Appleby. She was attentive to our needs and worked tirelessly to find us the perfect home. We couldn't be happier with our new place!",
+        name: "Barbara D. Smith",
+        image: "/customer5.jpg"
+    },
+    {
+        id: 3,
+        comment: "I highly recommend Jodi J. Appleby. She was attentive to our needs and worked tirelessly to find us the perfect home. We couldn't be happier with our new place!",
+        name: "Barbara D. Smith",
+        image: "/customer4.jpg"
+    },
+]
