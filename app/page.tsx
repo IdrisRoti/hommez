@@ -2,6 +2,7 @@ import About from "@/components/landing/About";
 import Customers from "@/components/landing/Customers";
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
+import LatestBlogs from "@/components/landing/LatestBlogs";
 import Listings from "@/components/landing/Listings";
 import Locations from "@/components/landing/Locations";
 import Services from "@/components/landing/Services";
@@ -23,6 +24,7 @@ export default function Home() {
         <Services />
         <Locations />
         <TeamExperts />
+        <LatestBlogs />
     </div>
   );
 }

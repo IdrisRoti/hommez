@@ -19,7 +19,7 @@ export default function TeamExperts() {
                             />
                         </div>
                         <h2 className="text-textDarker font-semibold md:mt-6 md:mb-3 md:text-3xl">{expert.name}</h2>
-                        <h3 className="text-secondary text-xs">{expert.title}</h3>
+                        <h3 className="text-secondary max-md:text-xs">{expert.title}</h3>
                     </div>
                 ))
             }

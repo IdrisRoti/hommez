@@ -2,7 +2,7 @@
 
 import { PropertySearchForm } from "../forms/PropertySearchForm";
 import GradientBall from "../gradient-ball";
-import HeroSwiperCarousel from "../swiper/HeroSwiper";
+import HeroSwiperCarousel from "../swiper/hero-swiper";
 
 export default function Hero() {
   return (
