@@ -5,7 +5,6 @@ import { testimonials } from "@/constants"
 import { motion, useMotionValue } from "framer-motion"
 
 import Image from "next/image"
-import { useState } from "react"
 
 import {  MdOutlineStar  } from "react-icons/md";
 
