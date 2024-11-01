@@ -6,7 +6,7 @@ export default function TeamExperts() {
     <section className="contain mt-4 text-center">
         <h2 className="text-secondary text-lg md:text-xl md:mb-2 lg:mb-4 text-center font-medium tracking-wider uppercase">Introduce yourself to</h2>
         <h3 className="mb-3 md:mb-5 font-semibold text-2xl md:text-4xl text-center">Our Team of Experts</h3>
-        <div className="flex flex-wrap items-center justify-center gap-[2rem] md:gap-[4rem] mt-12">
+        <div className="flex flex-wrap items-center justify-center gap-[1rem] md:gap-[4rem] mt-12">
             {
                 teamExperts.map((expert) => (
                     <div key={expert.id} className="flex flex-col items-center">
@@ -18,8 +18,8 @@ export default function TeamExperts() {
                                 alt={expert.name}
                             />
                         </div>
-                        <h2 className="text-textDarker font-semibold md:mt-6 md:mb-3 text-xl md:text-3xl">{expert.name}</h2>
-                        <h3 className="text-secondary">{expert.title}</h3>
+                        <h2 className="text-textDarker font-semibold md:mt-6 md:mb-3 md:text-3xl">{expert.name}</h2>
+                        <h3 className="text-secondary text-xs">{expert.title}</h3>
                     </div>
                 ))
             }
