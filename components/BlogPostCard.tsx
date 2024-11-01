@@ -3,8 +3,7 @@ import Link from 'next/link'
 
 import { BsArrowRight } from 'react-icons/bs'
 
-export default function 
-() {
+export default function BlogPostCard () {
   return (
     <article className='w-full relative'>
         <div className='relative h-[12.5rem] lg:h-[15rem] rounded-[1.25rem] lg:rounded-[1.875rem] overflow-hidden after:absolute after:inset-0 after:bg-black after:opacity-30'>

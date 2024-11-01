@@ -18,15 +18,15 @@ type TestimonialCarouselTypes = {
 const DRAG_BUFFER = 20;
 
 export default function TestimonialCarousel({slideIndex, setSlideIndex}: TestimonialCarouselTypes) {
-    const [isDragging, setIsDragging] = useState(false)
+    // const [isDragging, setIsDragging] = useState(false)
     const dragX = useMotionValue(0)
 
-    const onDragStart = () => {
-        setIsDragging(true)
-    }
+    // const onDragStart = () => {
+    //     setIsDragging(true)
+    // }
 
     const onDragEnd = () => {
-        setIsDragging(false)
+        // setIsDragging(false)
 
         const x = dragX.get();
         console.log(x)
@@ -47,7 +47,7 @@ export default function TestimonialCarousel({slideIndex, setSlideIndex}: Testimo
                 left: 0,
                 right: 0
             }} 
-            onDragStart={onDragStart}
+            // onDragStart={onDragStart}
             onDragEnd={onDragEnd}
             animate={{
                 translateX: `-${slideIndex * 100}%`
