@@ -1,4 +1,5 @@
 import About from "@/components/landing/About";
+import BecomeAgent from "@/components/landing/BecomeAgent";
 import Customers from "@/components/landing/Customers";
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
@@ -27,6 +28,7 @@ export default function Home() {
         <TeamExperts />
         <LatestBlogs />
         <Testimonials />
+        <BecomeAgent />
     </div>
   );
 }

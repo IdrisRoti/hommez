@@ -1,8 +1,23 @@
+"use client"
+
 import Image from "next/image";
+
 import GradientBall from "../gradient-ball";
 import AboutUsCards from "./AboutUsCards";
+import CircularText from "../circular-text";
+import { useEffect, useState } from "react";
 
 export default function About() {
+    const [windowWindth, setWindowWidth] = useState<number>()
+
+    useEffect(()=>{
+        if(typeof window != "undefined"){
+            setWindowWidth(window.innerWidth)
+        }
+    }, [])
+
+    console.log(windowWindth)
+
   return (
     <section className="contain mt-14 md:mt-32">
         <h2 className="text-secondary text-lg md:text-xl mb-2 md:mb-6 md:text-center lg:text-left font-medium tracking-wide ">WHO ARE WE</h2>
@@ -39,8 +54,16 @@ export default function About() {
                         />                    
                     </div>
                 </div>
-                <GradientBall className="w-[3.75rem] absolute -bottom-7 right-1/4 opacity-50" />
-                {/* <p className="absolute text-secondary">REAL ESTATE SINCE 2022 - REAL ESTATE SINCE 2022 - </p> */}
+                <GradientBall 
+                    className="w-[3.75rem] absolute -bottom-7 right-1/4 opacity-50" 
+                />
+                <div className="absolute -top-[20%] md:-top-[10%] lg:-top-[20%] right-1/2 translate-x-1/2 z-30">
+                    <CircularText 
+                        text="Real Estate Since 2022 - Real Estate Since 2022 -"
+                        width={windowWindth && windowWindth > 768 ? 206 : 150}
+                        className="text-secondary text-xs md:text-sm"
+                    />
+                </div>
             </div>
             <div className="lg:hidden"><AboutUsCards /></div>
         </div>

@@ -9,7 +9,6 @@ import GradientBall from '../gradient-ball'
 
 export default function Testimonials() {
     const [slideIndex, setSlideIndex] = useState(0)
-    console.log(slideIndex)
 
   return (
     <section className='contain my-14 md:my-20 flex flex-col md:flex-row items-center'>
