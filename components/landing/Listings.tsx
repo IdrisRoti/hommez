@@ -4,7 +4,7 @@ import ListCard from '../ListCard'
 
 export default function Listings() {
   return (
-    <section className='contain mt-14 md:mt-32'>
+    <section id="listings" className='contain mt-14 md:mt-32'>
         <div className='flex flex-col sm:flex-row items-center justify-between mb-5'>
             <div className='flex flex-col w-full'>
                 <h2 className="text-secondary text-lg md:text-xl font-medium tracking-wider">CHECKOUT OUR NEW</h2>

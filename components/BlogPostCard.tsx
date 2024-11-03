@@ -1,9 +1,12 @@
+"use client"
+
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import { BsArrowRight } from 'react-icons/bs'
 
-export default function BlogPostCard () {
+export function BlogPostCard () {
   return (
     <article className='w-full relative'>
         <div className='relative h-[12.5rem] lg:h-[15rem] rounded-[1.25rem] lg:rounded-[1.875rem] overflow-hidden after:absolute after:inset-0 after:bg-black after:opacity-30'>
@@ -13,7 +16,8 @@ export default function BlogPostCard () {
                 fill
                 alt=""
              />
-             <div className='w-[3.6rem] h-[3.15rem] flex flex-col justify-center bg-white rounded-b-md absolute top-0 left-[8%] md:left-[15%] text-center z-10 shadow-lg'>
+             <div 
+              className='w-[3.6rem] h-[3.15rem] flex flex-col justify-center bg-white rounded-b-md absolute top-0 left-[8%] md:left-[15%] text-center z-10 shadow-lg'>
                 <h2 className='text-textDark text-xl font-semibold leading-[0.5]'>26</h2>
                 <p className='text-textlight'>Wed</p>
              </div>

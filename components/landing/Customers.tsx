@@ -1,11 +1,22 @@
+"use client"
+
 import { happyCustormersImages } from '@/constants'
+
+import { motion } from 'framer-motion'
+
 import Image from 'next/image'
+
 import { BiPlus } from 'react-icons/bi'
 
 export default function Customers() {
   return (
-    <section className='w-full contain flex flex-col sm:flex-row justify-center items-center mt-4 sm:mt-10 gap-8'>
-        <div className='h-24 w-full sm:w-[22.5rem] bg-white rounded-full flex items-center justify-center gap-3 boxShadow'>
+    <section    
+        className='w-full contain flex flex-col sm:flex-row justify-center items-center mt-4 sm:mt-10 gap-8'>
+        <motion.div 
+             initial={{ y: 50, opacity: 0}}     
+             whileInView={{ y: 0, opacity: 1}} 
+             transition={{duration: .5}}
+            className='h-24 w-full sm:w-[22.5rem] bg-white rounded-full flex items-center justify-center gap-3 boxShadow'>
             <div className='flex items-center relative'>
                 {
                     happyCustormersImages.map((url, i)=>(
@@ -29,8 +40,12 @@ export default function Customers() {
             </div>
             <h2 className='text-lg sm:text-xl font-semibold'>72k+ Happy<br /> 
             Customers</h2>
-        </div>
-        <div className='h-24 w-full sm:w-[20rem] bg-white rounded-full flex items-center justify-center gap-3 boxShadow'>
+        </motion.div>
+        <motion.div 
+         initial={{ y: 50, opacity: 0}}     
+         whileInView={{ y: 0, opacity: 1}} 
+         transition={{duration: .5, delay: .3}}
+         className='h-24 w-full sm:w-[20rem] bg-white rounded-full flex items-center justify-center gap-3 boxShadow'>
             <div className='relative w-[3.8rem] aspect-square rounded-full overflow-hidden'>
                 <Image
                     src="/home2.jpg"
@@ -41,7 +56,7 @@ export default function Customers() {
             </div>
             <h2 className='text-lg sm:text-xl font-semibold'>200+ New<br /> 
             Listings Everyday!</h2>
-        </div>
+        </motion.div>
     </section>
   )
 }

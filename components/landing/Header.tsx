@@ -9,15 +9,19 @@ import { CiLocationOn, CiMail  } from "react-icons/ci";
 import { IoCallOutline } from "react-icons/io5";
 import { PiWarehouseDuotone } from "react-icons/pi";
 import { HiOutlineUserCircle } from "react-icons/hi2";
-import { FiMenu } from "react-icons/fi";
+
 import { motion } from "framer-motion";
+
+import MobileNav from "../MobileNav";
+import HamburgerMenu from "../HamburgerMenu";
 
 
 export default function Header() {
     const [activeSection, setActiveSection] = useState("#home")
+    const [showMobileMenu, setShowMobileMenu] = useState(false)
 
   return (
-    <header id="#home">
+    <header id="#home" className="z-[999]">
         <div className='bg-primary h-10 text-white hidden md:block'>
             <div className='contain h-full flex items-center justify-between'>
                 <div className='flex items-center gap-2'>
@@ -76,9 +80,12 @@ export default function Header() {
                 </button>
             </div>
             {/* *****************************MOBILE MENU********************************* */}
-                <div className="lg:hidden">
-                    <FiMenu className="w-6 h-6" />
+                <div className="lg:hidden" onClick={() => setShowMobileMenu(prev=>!prev)}>
+                    <HamburgerMenu showMobileMenu={showMobileMenu}/>
                 </div>
+                {
+                        showMobileMenu && <MobileNav setShowMobileMenu={setShowMobileMenu} showMobileMenu={showMobileMenu} />
+                }
         </nav>
     </header>
   )

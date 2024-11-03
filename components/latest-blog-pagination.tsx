@@ -1,7 +1,7 @@
 import React from 'react'
-import BlogPostCard from './BlogPostCard'
+import {BlogPostCard} from './BlogPostCard'
 
-export default function PaginatedBlogs() {
+export function PaginatedBlogs() {
   return (
     <div className='w-full overflow-hidden'>
         <div className='w-full flex flex-col md:flex-row md:gap-4 lg:gap-10'>

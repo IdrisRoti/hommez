@@ -1,6 +1,9 @@
+"use client"
+
 import { locationsArr } from "@/constants";
 import Image from "next/image";
 import GradientBall from "../gradient-ball";
+import { motion } from "framer-motion";
 
 export default function Locations() {
   return (
@@ -11,27 +14,29 @@ export default function Locations() {
     <div className="mt-14 mb-24 lg:mb-28 hidden md:block">
         <div className="flex items-center gap-6 lg:gap-12 h-[13rem] lg:h-[20rem]">
             {
-                locationsArr.slice(0, 3).map((location) => (
-                    <div 
-                        key={location.id} 
-                        className="relative h-full w-[30%] last-of-type:w-[40%] rounded-[1.875rem] overflow-hidden after:bg-gradient-to-t after:from-[rgba(0,0,0,.6)]  after:absolute after:inset-0 group">
+                locationsArr.slice(0, 3).map((location, i) => (
+                    <div key={location.id} className="relative h-full w-[30%] last-of-type:w-[40%] rounded-[1.875rem] overflow-hidden after:bg-gradient-to-t after:from-[rgba(0,0,0,.6)]  after:absolute after:inset-0 group">
                         <Image
                             src={location.image} 
                             alt={location.location}
                             fill
                             className="group-hover:scale-110 transition duration-500 object-cover"
                         />
-                        <div className="absolute bottom-6 left-6 z-10 text-white">
+                        <motion.div
+                            initial={{ y: 100}} 
+                            whileInView={{ y: 0}} 
+                            transition={{ duration: .5, delay: .3 * i}} 
+                            className="absolute bottom-6 left-6 z-10 text-white">
                             <h2 className="text-6xl font-semibold opacity-60">{location.amount}</h2>
                             <h3 className="text-lg">{location.location}</h3>
-                        </div> 
+                        </motion.div> 
                     </div>
                 ))
             }
         </div>
         <div className="flex items-center gap-6 lg:gap-12 h-[13rem] lg:h-[20rem] mt-6 lg:mt-12">
             {
-                locationsArr.slice(3, 5).map((location) => (
+                locationsArr.slice(3, 5).map((location, i) => (
                     <div 
                         key={location.id} 
                         className="relative h-full w-[40%] last-of-type:w-[60%] rounded-[1.875rem] overflow-hidden after:bg-gradient-to-t after:from-[rgba(0,0,0,.6)]  after:absolute after:inset-0 group">
@@ -41,10 +46,14 @@ export default function Locations() {
                             fill
                             className="group-hover:scale-110 transition duration-500 object-cover"
                         />
-                        <div className="absolute bottom-6 left-6 z-10 text-white">
+                        <motion.div
+                            initial={{ y: 100}} 
+                            whileInView={{ y: 0}} 
+                            transition={{ duration: .5, delay: .3 * i}} 
+                            className="absolute bottom-6 left-6 z-10 text-white">
                             <h2 className="text-6xl font-semibold opacity-60">{location.amount}</h2>
                             <h3 className="text-lg">{location.location}</h3>
-                        </div> 
+                        </motion.div> 
                     </div>
                 ))
             }
@@ -63,10 +72,14 @@ export default function Locations() {
                             fill
                             className="group-hover:scale-110 transition duration-500 object-cover"
                         />
-                        <div className="absolute bottom-4 left-4 z-10 text-white">
+                        <motion.div
+                            initial={{ y: 100}} 
+                            whileInView={{ y: 0}} 
+                            transition={{ duration: .5}} 
+                            className="absolute bottom-4 left-4 z-10 text-white">
                             <h2 className="text-3xl font-semibold opacity-60">{location.amount}</h2>
                             <h3 className="text-sm">{location.location}</h3>
-                        </div> 
+                        </motion.div> 
                     </div>
                 ))
             }

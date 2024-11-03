@@ -46,7 +46,10 @@ export default function HeroSwiperCarousel() {
     }, [dragging])
 
   return ( 
-    <div 
+    <motion.div 
+        initial={{ opacity: 0}}
+        animate={{ opacity: 1}}
+        transition={{ duration: .5, delay: .6 }}
         onMouseEnter={()=> 
         setDragging(true)} 
         onMouseLeave={()=> 
@@ -92,12 +95,12 @@ export default function HeroSwiperCarousel() {
         {/* ********** CAROUSEL BUTTONS ************* */}
         <button 
             onClick={()=>{setSlideIndex(prev => prev >= 1 ? prev - 1 : 0)}}
-            className='boxShadow z-[999] absolute -left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 flex items-center justify-center transition rounded-full w-10 aspect-square'>
+            className='boxShadow z-[100] absolute -left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 flex items-center justify-center transition rounded-full w-10 aspect-square'>
             <CgChevronLeft />
         </button>
         <button 
             onClick={()=>{setSlideIndex(prev => prev < (heroCarouselHomeImages.length - 1) ? prev + 1 : heroCarouselHomeImages.length - 1)}}
-            className='boxShadow z-[999] absolute -right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 flex items-center justify-center transition rounded-full w-10 aspect-square'>
+            className='boxShadow z-[100] absolute -right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 flex items-center justify-center transition rounded-full w-10 aspect-square'>
             <CgChevronRight />
         </button> 
                {/* ********** CAROUSEL PAGINATION ************* */}
@@ -117,7 +120,7 @@ export default function HeroSwiperCarousel() {
                 </div>
             ))}
         </div>
-    </div>
+    </motion.div>
 
 
   )
