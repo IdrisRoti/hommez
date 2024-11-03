@@ -2,17 +2,16 @@
 
 import { NavLinks } from '@/constants'
 
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 import Link from 'next/link'
 import { Dispatch, SetStateAction } from 'react'
 
 type TMobileNav = {
   setShowMobileMenu: Dispatch<SetStateAction<boolean>>;
-  showMobileMenu: boolean;
 }
 
-export default function MobileNav({setShowMobileMenu, showMobileMenu}: TMobileNav) {
+export default function MobileNav({setShowMobileMenu}: TMobileNav) {
   return (
       <motion.nav 
       className='fixed w-[90vw] mx-auto top-20 bg-white rounded-[1.25rem] shadow-2xl z-[999] flex flex-col'

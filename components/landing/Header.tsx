@@ -84,7 +84,7 @@ export default function Header() {
                         <HamburgerMenu showMobileMenu={showMobileMenu}/>
                     </div>
                     {
-                            showMobileMenu && <MobileNav setShowMobileMenu={setShowMobileMenu} showMobileMenu={showMobileMenu} />
+                            showMobileMenu && <MobileNav setShowMobileMenu={setShowMobileMenu} />
                     }
             </nav>
     </header>
