@@ -33,7 +33,7 @@ export default function About() {
                     initial= {{ y: 50, opacity: 0}} 
                     whileInView= {{ y: 0, opacity: 1}} 
                     viewport={{ margin: "-50px"}}
-                    transition={{ duration: 3}}
+                    transition={{ duration: 1}}
                     className="relative self-end h-[16.25rem] md:h-[30rem] w-full rounded-[1.25rem] md:rounded-[1.9rem] overflow-hidden">
                     <Image
                          className="object-cover hover:scale-110 transition"
@@ -45,7 +45,7 @@ export default function About() {
                 <motion.div
                     initial= {{ y: -50, opacity: 0}} 
                     whileInView= {{ y: 0, opacity: 1}}
-                    transition={{ duration: .5}}
+                    transition={{ duration: .1}}
                     className="w-full h-[16rem] md:h-[28rem]">
                     <div className="relative self-start mb-3 md:mb-5 h-3/5 w-full rounded-[1.25rem] md:rounded-[1.9rem] overflow-hidden">
                         <Image

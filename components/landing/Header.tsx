@@ -40,53 +40,53 @@ export default function Header() {
                 </div>
             </div>
         </div>
-        <nav className="contain h-20 flex items-center justify-between gap-2 text-dark">
-            <ul className="items-center hidden lg:flex">
-                {
-                    NavLinks.map((link)=>{
-                        return ( 
-                            <li     
-                                key={link.id} 
-                                className= "font-medium relative">
-                                <Link 
-                                    onClick={()=>setActiveSection(link.href)} 
-                                    className="h-full w-full block px-4 py-2 rounded-full hover:bg-[#4361ee] hover:bg-opacity-30 transition" href={link.href}>
-                                        {link.label}
-                                </Link>
-                                {link.href === activeSection && (
-                                    <motion.span 
-                                        className="absolute rounded-full -z-10 inset-0 bg-[#4361ee] bg-opacity-30"
-                                        layoutId="activeSection"
-                                        ></motion.span>)}
-                            </li>
-                        )
-                    })
-                }
-            </ul>
-            <div className="flex items-center gap-2">
-                <div className="bg-primary w-10 aspect-square grid place-items-center rounded-full">
-                    <PiWarehouseDuotone className="text-white w-6 h-6" />
+            <nav className="contain h-20 flex items-center justify-between gap-2 text-dark">    
+                <ul className="items-center hidden lg:flex">
+                    {
+                        NavLinks.map((link)=>{
+                            return ( 
+                                <li     
+                                    key={link.id} 
+                                    className= "font-medium relative">
+                                    <Link 
+                                        onClick={()=>setActiveSection(link.href)} 
+                                        className="h-full w-full block px-4 py-2 rounded-full hover:bg-[#4361ee] hover:bg-opacity-30 transition" href={link.href}>
+                                            {link.label}
+                                    </Link>
+                                    {link.href === activeSection && (
+                                        <motion.span 
+                                            className="absolute rounded-full -z-10 inset-0 bg-[#4361ee] bg-opacity-30"
+                                            layoutId="activeSection"
+                                            ></motion.span>)}
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+                <div className="flex items-center gap-2">
+                    <div className="bg-primary w-10 aspect-square grid place-items-center rounded-full">
+                        <PiWarehouseDuotone className="text-white w-6 h-6" />
+                    </div>
+                    <h2 className="font-semibold text-[#1e1e1e] text-xl">Hommez</h2>
                 </div>
-                <h2 className="font-semibold text-[#1e1e1e] text-xl">Hommez</h2>
-            </div>
-            <div className="hidden lg:flex items-center gap-2">
-                <button className="px-4 py-1 flex items-center gap-2">
-                    <HiOutlineUserCircle className="w-5 h-5" />
-                    <span>Login/Register</span>
-                </button>
-                <button className="px-4 py-2 rounded-full bg-primary text-white flex items-center gap-2">
-                    <PiWarehouseDuotone className="w-5 h-5" />
-                    <span>Add Listing</span>
-                </button>
-            </div>
-            {/* *****************************MOBILE MENU********************************* */}
-                <div className="lg:hidden" onClick={() => setShowMobileMenu(prev=>!prev)}>
-                    <HamburgerMenu showMobileMenu={showMobileMenu}/>
+                <div className="hidden lg:flex items-center gap-2">
+                    <button className="px-4 py-1 flex items-center gap-2">
+                        <HiOutlineUserCircle className="w-5 h-5" />
+                        <span>Login/Register</span>
+                    </button>
+                    <button className="px-4 py-2 rounded-full bg-primary text-white flex items-center gap-2">
+                        <PiWarehouseDuotone className="w-5 h-5" />
+                        <span>Add Listing</span>
+                    </button>
                 </div>
-                {
-                        showMobileMenu && <MobileNav setShowMobileMenu={setShowMobileMenu} showMobileMenu={showMobileMenu} />
-                }
-        </nav>
+                {/* *****************************MOBILE MENU********************************* */}
+                    <div className="lg:hidden" onClick={() => setShowMobileMenu(prev=>!prev)}>
+                        <HamburgerMenu showMobileMenu={showMobileMenu}/>
+                    </div>
+                    {
+                            showMobileMenu && <MobileNav setShowMobileMenu={setShowMobileMenu} showMobileMenu={showMobileMenu} />
+                    }
+            </nav>
     </header>
   )
 }
