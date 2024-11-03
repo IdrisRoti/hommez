@@ -161,3 +161,5 @@ export const testimonials = [
         image: "/customer4.jpg"
     },
 ]
+
+export const discoveryLinks = ["Canada", "United States", "Germany", "Nigeria", "India"]

@@ -11,11 +11,11 @@ export default function Testimonials() {
     const [slideIndex, setSlideIndex] = useState(0)
 
   return (
-    <section className='contain my-14 md:my-20 flex flex-col md:flex-row items-center'>
+    <section className='contain mt-14 md:mt-28 flex flex-col md:flex-row items-center'>
         <div className='w-full'>
             <h2 className="text-secondary text-lg md:text-xl md:mb-2 lg:mb-4 font-medium tracking-wider uppercase">TESTIMONIALS</h2>
             <h3 className="mb-3 md:mb-5 text-textDark font-semibold text-2xl md:text-4xl">Look at What Our <br />Customers Say!</h3>
-            <p className='mt-5 text-textDark w-[90%] lg:w-2/3'>Fusce venenatis tellus a felis scelerisque, non pulvinar est pellentesque. </p>
+            <p className='mt-5 text-textDark md:w-[90%] lg:w-2/3'>Fusce venenatis tellus a felis scelerisque, non pulvinar est pellentesque. </p>
             {/* *********** CAROUSEL PAGINATION BUTTONS ***************** */}
             <div className='hidden mt-10 md:flex items-center gap-10'>
                 <button 
@@ -32,7 +32,6 @@ export default function Testimonials() {
                 >
                     <BsArrowRight className='size-6 text-secondary group-hover:text-white transition' />
                 </button>
-                
             </div>
         </div>
         <div className='relative w-full mt-6 md:mt-0'>
