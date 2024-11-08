@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="relative">
       <div className="h-[120rem] lg:h-[113rem] w-full absolute -top-[60rem] sm:-top-[48rem] lg:-top-[57rem] -z-10 rounded-full bg-gradient-to-b from-white from-50% to-secondary opacity-30" />
-        <Header />
+        <Header className="backdrop-blur-xl fixed top-0 w-full" />
         <Hero />
         <div className="flex flex-col">
           <Customers />

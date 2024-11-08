@@ -8,7 +8,7 @@ import HeroSwiperCarousel from "../swiper/hero-swiper";
 
 export default function Hero() {
   return (
-    <section className='contain flex flex-col lg:flex-row items-center gap-3 mt-2 sm:mt-5 lg:mt-10'>
+    <section className='contain flex flex-col lg:flex-row items-center gap-3 mt-[2rem] sm:mt-[5rem] lg:mt-[10rem]'>
         <div className="w-full lg:w-[60%] lg:pl-14 relative">
           <motion.h2 
             initial={{ y: -20, opacity: 0}}

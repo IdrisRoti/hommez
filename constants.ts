@@ -6,27 +6,27 @@ export const NavLinks = [
     {
         id: 1,
         label: "Home",
-        href: "#home"       
+        href: "/#home"       
     },
     {
         id: 2,
         label: "About",
-        href: "#about"       
+        href: "/#about"       
     },
     {
         id: 3,
         label: "Listings",
-        href: "#listings"       
+        href: "/#listings"       
     },
     {
         id: 4,
         label: "Services",
-        href: "#services"       
+        href: "/#services"       
     },
     {
         id: 5,
         label: "Blogs",
-        href: "#blogs"       
+        href: "/#blogs"       
     },
 ]
 

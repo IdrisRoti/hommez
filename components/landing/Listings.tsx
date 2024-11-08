@@ -25,7 +25,7 @@ export default function Listings() {
             <ListCard />
             <ListCard />
         </div>
-        <Link href="/" className='mt-8 mb-20 md:mb-28 block w-fit mx-auto px-8 py-3 hover:bg-primary hover:text-white transition sm:py-5 rounded-[1.875rem] text-primary border border-primary font-medium'>View more properties</Link>
+        <Link href="/listings" className='mt-8 mb-20 md:mb-28 block w-fit mx-auto px-8 py-3 hover:bg-primary hover:text-white transition sm:py-5 rounded-[1.875rem] text-primary border border-primary font-medium'>View more properties</Link>
     </section>
   )
 }

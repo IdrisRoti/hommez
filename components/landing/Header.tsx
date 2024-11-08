@@ -16,12 +16,12 @@ import MobileNav from "../MobileNav";
 import HamburgerMenu from "../HamburgerMenu";
 
 
-export default function Header() {
+export default function Header({className}:{className?: string}) {
     const [activeSection, setActiveSection] = useState("#home")
     const [showMobileMenu, setShowMobileMenu] = useState(false)
 
   return (
-    <header id="#home" className="z-[999]">
+    <header id="#home" className={`z-[999] ${className}`}>
         <div className='bg-primary h-10 text-white hidden md:block'>
             <div className='contain h-full flex items-center justify-between'>
                 <div className='flex items-center gap-2'>
