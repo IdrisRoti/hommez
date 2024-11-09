@@ -40,3 +40,17 @@ html {
 .cardShadow {
   box-shadow: 10px 10px 15px 10px rgba(0, 0, 0, 0.1);
 }
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #3a0ca3 transparent;
+}
+
+.hideScrollBar::-webkit-scrollbar {
+  display: none;
+}
+
+.hideScrollBar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

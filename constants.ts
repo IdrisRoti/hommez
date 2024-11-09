@@ -6,7 +6,7 @@ export const NavLinks = [
     {
         id: 1,
         label: "Home",
-        href: "/#home"       
+        href: "/"       
     },
     {
         id: 2,
@@ -163,3 +163,5 @@ export const testimonials = [
 ]
 
 export const discoveryLinks = ["Canada", "United States", "Germany", "Nigeria", "India"]
+
+export const propertyTypeArr = ["Buy", "Rent"] as const
