@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google"
 import "./globals.css";
 import PropertyListProvider from "@/providers/PropertyListProvider";
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "800"]})
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       >
         <PropertyListProvider>
           {children}
+          <Footer />
         </PropertyListProvider>
       </body>
     </html>

@@ -10,7 +10,7 @@ export default function ListCard() {
   return (
     <article>
         <Link className="" href="/">
-            <div className="relative overflow-hidden h-[13.75rem] sm:h-[21.25rem] sm:w-[21.25rem] rounded-[1.25rem] md:rounded-[1.875rem]">
+            <div className="relative overflow-hidden h-[13.75rem] sm:h-[17.25rem] rounded-[1.25rem] md:rounded-[1.875rem]">
                 <Image
                     src="/home4.jpg" 
                     alt=""

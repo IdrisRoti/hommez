@@ -10,26 +10,26 @@ const Filters = () => {
     const {setPropertyType, propertyType, search} = useContext(PropertyListContext)
     const router = useRouter()
 
-    const handlePropertyType = (type: "Buy" | "Rent") => {
-        setPropertyType(type);
-        router.push(`?${new URLSearchParams({...(search && {search}), propertyType})}`);
+    const handlePropertyType = (selectedType: "Buy" | "Rent") => {
+        setPropertyType(selectedType);
+        router.push(`?${new URLSearchParams({...(search && {search}), propertyType: selectedType})}`);
     }
 
   return (
     <div className='w-full'>
-       <div className='hideScrollBar w-full flex items-center lg:justify-center gap-4 overflow-auto [mask-image:linear-gradient(to_right,black_5%,black_90%,transparent)]'>
+       <div className='hideScrollBar w-full flex items-center lg:justify-center gap-2 overflow-auto [mask-image:linear-gradient(to_right,black_5%,black_90%,transparent)]'>
             <div className='flex items-center'>               
                 {
                     propertyTypeArr.map((type) => {
-                        const isSelected = type === propertyType
-
+                        const isSelected = type === propertyType;
+                        console.log("type", type)
                        return (
                                 <button 
                                     key={type}
                                     onClick={() => handlePropertyType(type)}
-                                    className={`border border-primary font-medium px-5 py-1 text-sm hover:opacity-70 transition ${isSelected ? "bg-primary text-white" : "text-primary bg-transparent"}`}
+                                    className={`border border-primary font-medium px-5 py-1 text-sm hover:opacity-70 transition uppercase ${isSelected ? "bg-primary text-white" : "text-primary bg-transparent"}`}
                                 >
-                                    RENT
+                                    {type}
                                 </button>
                             )
                     })

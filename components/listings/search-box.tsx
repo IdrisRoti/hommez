@@ -18,7 +18,7 @@ const SearchBox = () => {
    }
 
   return (
-    <form onSubmit={onSubmit} className='w-full lg:w-1/2 bg-white flex items-center gap-3 border-b border-textDark h-10'>
+    <form onSubmit={onSubmit} className='w-full lg:w-1/2 bg-transparent flex items-center gap-3 border-b border-textDark h-10'>
         <BiSearch className='size-6 text-textDark' />
         <input 
             value={search}

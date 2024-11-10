@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react'
 
-import TestimonialCarousel from '../swiper/testimonial-swiper'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
+
+import TestimonialCarousel from '../swiper/testimonial-swiper'
 import { testimonials } from '@/constants'
 import GradientBall from '../gradient-ball'
 
