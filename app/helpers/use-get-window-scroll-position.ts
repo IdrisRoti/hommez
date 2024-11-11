@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export const getWindowScrollPosition = () => {
+export const useGetWindowScrollPosition = () => {
     const [scrollPosition, setScrollPosition] = useState({x: 0, y: 0})
 
     useEffect(() => {
