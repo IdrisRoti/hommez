@@ -1,16 +1,18 @@
 "use client"
 
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { BsStarFill } from 'react-icons/bs';
 import { CgShare } from 'react-icons/cg';
 import { HiArrowLongLeft, HiPhoto } from "react-icons/hi2";
 
 const ListDetail = () => {
+  const router = useRouter();
   return (
     <div>
         <section className='h-14 bg-white z-10 border-b border-black/20 sticky top-0'>
             <div className='flex items-center contain h-full w-full'>
-                <button className='flex items-center gap-2 h-14 pr-10 border-r border-black/20 group'>
+                <button onClick={() => router.back()} className='flex items-center gap-2 h-14 pr-10 border-r border-black/20 group'>
                     <HiArrowLongLeft className='size-6 text-textDark group-hover:-translate-x-3 transition' />
                     <span className='text-[10px] uppercase tracking-wider font-semibold'>Back</span>
                 </button>
