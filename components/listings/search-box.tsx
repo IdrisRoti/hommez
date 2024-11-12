@@ -25,7 +25,7 @@ const SearchBox = () => {
             onChange={(e) => setSearch(e.target.value)}
             placeholder='Country, City or Address' 
             type="search" 
-            className='bg-transparent h-full w-full outline-none'
+            className='bg-transparent h-full w-full outline-none placeholder:font-serif'
         />
     </form>
   )

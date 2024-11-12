@@ -26,15 +26,15 @@ const ListingsMap = () => {
                     <button
                       onClick={() => setShowMap(false)} 
                       className='py-1.5 px-4 bg-white group-hover:bg-primary group-hover:text-white border border-primary flex items-center gap-2 justify-center transition'>
-                      <CiBoxList className='text-primary size-4 group-hover:text-white transition'/>
-                      <span className="text-primary text-sm group-hover:text-white transition">Hide map</span>
+                    <CiBoxList className='size-4 text-textDark group-hover:text-secondary group-hover:text-white transition' />
+                    <span className='text-[10px] uppercase tracking-wider font-semibold transition'>Hide map</span>
                     </button>
                 ) : (
                   <button
                     onClick={() => setShowMap(true)} 
                     className='py-1.5 px-4 bg-white group-hover:bg-primary group-hover:text-white border border-primary transition flex items-center gap-2 justify-center'>
-                    <BsStarFill className='text-primary size-4 group-hover:text-white transition'/>
-                    <span className="text-primary text-sm group-hover:text-white transition">Show map</span>
+                    <BsStarFill className='size-4 text-textDark group-hover:text-secondary group-hover:text-white transition' />
+                    <span className='text-[10px] uppercase tracking-wider font-semibold transition'>show map</span>
                   </button>
                 )
             }

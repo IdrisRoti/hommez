@@ -27,7 +27,7 @@ const Filters = () => {
                                 <button 
                                     key={type}
                                     onClick={() => handlePropertyType(type)}
-                                    className={`border border-primary font-medium px-5 py-1 text-sm hover:opacity-70 transition uppercase ${isSelected ? "bg-primary text-white" : "text-primary bg-transparent"}`}
+                                    className={`text-xs border border-primary px-5 py-1 hover:opacity-70 uppercase tracking-wider font-semibold ${isSelected ? "bg-primary text-white" : "text-primary bg-transparent"}`}
                                 >
                                     {type}
                                 </button>
@@ -35,10 +35,10 @@ const Filters = () => {
                     })
                 }
             </div> 
-            <button className='border border-primary text-primary font-medium px-5 py-1 text-sm flex-shrink-0'>PRICE RANGE</button>
-            <button className='border border-primary text-primary font-medium px-5 py-1 text-sm flex-shrink-0'>BEDS & BATHS</button>
-            <button className='border border-primary text-primary font-medium px-5 py-1 text-sm flex-shrink-0'>HOME TYPE</button>
-            <button className='border border-primary text-primary font-medium px-5 py-1 text-sm flex-shrink-0'>FILTERS</button>
+            <button className='uppercase tracking-wider font-semibold text-xs border border-primary text-primary px-5 py-1 flex-shrink-0'>PRICE RANGE</button>
+            <button className='uppercase tracking-wider font-semibold border border-primary text-primary px-5 py-1 text-xs flex-shrink-0'>BEDS & BATHS</button>
+            <button className='uppercase tracking-wider font-semibold border border-primary text-primary px-5 py-1 text-xs flex-shrink-0'>HOME TYPE</button>
+            <button className='uppercase tracking-wider font-semibold border border-primary text-primary px-5 py-1 text-xs flex-shrink-0'>FILTERS</button>
        </div>
     </div>
   )

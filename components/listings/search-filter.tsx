@@ -2,7 +2,7 @@
 
 import SearchBox from './search-box'
 import Filters from './filters'
-import { useGetWindowScrollPosition } from '@/app/helpers/use-get-window-scroll-position'
+import { useGetWindowScrollPosition } from '@/helpers/use-get-window-scroll-position'
 
 const SearchFilter = () => {
 const {y} = useGetWindowScrollPosition()

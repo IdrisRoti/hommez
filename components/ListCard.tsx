@@ -9,7 +9,7 @@ import { LuBed, LuBath } from "react-icons/lu";
 export default function ListCard() {
   return (
     <article>
-        <Link className="" href="/">
+        <Link className="" href="/list/some-list">
             <div className="relative overflow-hidden h-[13.75rem] sm:h-[17.25rem] rounded-[1.25rem] md:rounded-[1.875rem]">
                 <Image
                     src="/home4.jpg" 
