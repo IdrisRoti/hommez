@@ -41,7 +41,7 @@ const ContactSection = () => {
                     <div className="">
                         <CustomForm name="message" label="Message" formType="textarea" />
                     </div>
-                    <p className="mt-6 mb-3 text-sm font-thin">By submitting this form, you acknowledge that you accept the Hommez's International Realty <b>Privacy Policy</b> and <b>Terms of Use</b>.</p>
+                    <p className="mt-6 mb-3 text-sm font-thin">By submitting this form, you acknowledge that you accept the Hommez&apos;s International Realty <b>Privacy Policy</b> and <b>Terms of Use</b>.</p>
                     <button className='w-fit md:ml-auto uppercase tracking-widest bg-primary px-5 py-4 text-white flex items-center gap-3 group'>
                         <HiArrowLongLeft className='size-6 rotate-[30deg] group-hover:rotate-0 transition' />
                         <span>send message</span>
