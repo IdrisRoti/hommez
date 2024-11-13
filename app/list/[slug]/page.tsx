@@ -1,6 +1,7 @@
-import Header from '@/components/landing/Header'
 import ListDetail from '@/components/list/ListDetail';
+import ListHeader from '@/components/list/ListHeader';
 import ScrollDownLine from '@/components/scroll-down-line'
+
 import { HiPhoto } from 'react-icons/hi2'
 
 const ListPage = () => {
@@ -8,7 +9,7 @@ const ListPage = () => {
 
   return (
     <div className=''>
-        <Header className='' />
+        <ListHeader />
         <div
             className='relative h-[50vh] lg:h-[80vh] after:absolute after:h-full md:after:h-2/3 after:w-full after:bottom-0 after:bg-gradient-to-t after:from-[rgba(0,0,0,.8)] to-[rgba(0,0,0,.1)]'
             style={{
@@ -40,4 +41,4 @@ const ListPage = () => {
   )
 }
 
-export default ListPage
+export default ListPage;

@@ -1,6 +1,7 @@
 import { discoveryLinks, NavLinks } from '@/constants'
+
 import Link from 'next/link'
-import React from 'react'
+
 import { BiPhone } from 'react-icons/bi'
 import { BsArrowRight } from 'react-icons/bs'
 import { CgMail } from 'react-icons/cg'
@@ -47,7 +48,7 @@ export default function Footer() {
             </div>
             <div className='lg:w-2/5'>
                 <h2 className='text-lg font-semibold'>Subscribe to our Newsletter!</h2>
-                <div className='my-6 w-[21.875rem] h-[3.75rem] rounded-full bg-white overflow-hidden flex items-center boxShadow px-[5px]'>
+                <div className='my-6 w-[19rem] lg:w-[21.875rem] h-[3.75rem] rounded-full bg-white overflow-hidden flex items-center boxShadow px-[5px]'>
                     <input className='ml-4 w-full h-full bg-transparent placeholder:text-textlighter outline-none' type="email" placeholder='Email Address' />
                     <button className='w-[3.125rem] rounded-full aspect-square bg-primary ml-auto text-white grid place-items-center flex-shrink-0'><BsArrowRight className='size-5' /></button>
                 </div>
