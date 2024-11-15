@@ -2,7 +2,7 @@ import Header from '@/components/landing/Header'
 import ListingsMap from '@/components/listings/listings-map'
 import SearchFilter from '@/components/listings/search-filter'
 
-const ListingsPage = async ({searchParams}: { searchParams: {[key: string]: string | undefined}}) => {
+const ListingsPage = async ({searchParams}: { searchParams: Promise<{[key: string]: string | undefined}>}) => {
   const {propertyType} = await searchParams;
   const {bed} = await searchParams;
   const {bath} = await searchParams;
