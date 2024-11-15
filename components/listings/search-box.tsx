@@ -9,12 +9,19 @@ import { BiSearch } from 'react-icons/bi'
 
 const SearchBox = () => {
     const router = useRouter()
-    const {search, setSearch, propertyType} = useContext(PropertyListContext)
+    const {search, setSearch, propertyType, priceRange, bedsValue, bathsValue, selectedHomeTypes} = useContext(PropertyListContext)
 
    const onSubmit = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     if(!search) return
-    router.push(`?${new URLSearchParams({search, propertyType})}`)
+    router.push(`?${new URLSearchParams({ 
+      ...(search && {search}),
+      ...(priceRange && {maxprice: priceRange}),
+      ...(bedsValue && {bed: bedsValue}),
+      ...(bathsValue && {bath: bathsValue}),
+      ...(selectedHomeTypes.length && {homeTypes: selectedHomeTypes.join("-")}),
+      propertyType,
+   })}`)
    }
 
   return (

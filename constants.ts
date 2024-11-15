@@ -165,3 +165,5 @@ export const testimonials = [
 export const discoveryLinks = ["Canada", "United States", "Germany", "Nigeria", "India"]
 
 export const propertyTypeArr = ["Buy", "Rent"] as const
+
+export const homeTypes = ["Apartments", "Condominiums", "Co-Op Properties", "Fractional Ownership", "Duplex Homes", "Farm and Ranch Properties", "Land", "Multi Family Homes", "Single Family Homes", "Private Islands", "Townhouse"]

@@ -43,7 +43,7 @@ const ListDetail = () => {
         </section>
         {/* ********** LIST TITLE & DETAIL */}
         <div className='contain'>
-          <section className='flex flex-col py-4 md:py-8  md:flex-row justify-between items-center border-b border-black/20'>
+          <section className='flex flex-col py-4 md:py-8  md:flex-row justify-between items-center md:border-b border-black/20'>
             <div className='w-full mb-5'>
               <h1 className='text-2xl md:text-3xl font-serif'>Hacienda Canalete
             Cartagena, Bolivar, 130002 Colombia</h1>

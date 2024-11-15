@@ -9,7 +9,7 @@ type TListings = {
 const Listings = ({showMap}: TListings) => {
   return (
     <div className='w-full'>
-        <h2 className='text-textDark text-xl font-semibold lg:w-[90%] font-serif'>Viewing 5 of 30 Homes for Sale in All locations</h2>
+        <h2 className='text-textDark text-xl lg:w-[90%] font-serif'>Viewing 5 of 30 Homes for Sale in All locations</h2>
         <p className='text-textlight mt-2'>Showing listings marketed by all brokers in the searched area.</p>
         <div className={`grid grid-cols-1 mt-6 gap-6 ${showMap ? "md:grid-cols-2" : "md:grid-cols-3"}`}>
             <ListCard />

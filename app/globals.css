@@ -29,6 +29,91 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ** SCROLLBAR STYLES ** */
+
+.scroll-bar-y::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scroll-bar-y::-webkit-scrollbar-thumb {
+  background-color: var(--bright-pink);
+  border-radius: 5px;
+}
+
+.scroll-bar-x::-webkit-scrollbar {
+  height: 2px;
+}
+
+.scroll-bar-x::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 5px;
+}
+
+input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+/* TRACK STYLES */
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--bright-pink);
+  height: 2px;
+}
+
+input[type="range"]::-moz-range-track {
+  background: var(--bright-pink);
+  height: 2px;
+}
+
+/* THUMB STYLES */
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background: var(--bright-pink);
+  margin-top: -10.5px;
+  border-radius: 50%;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: var(--bright-pink);
+  border: none;
+  border-radius: none; /*  Firefox adds default border and corners */
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  scale: 1.2;
+  background: #a13c6b;
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+  scale: 1.2;
+  background: #a13c6b;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  scale: 1.2;
+  background: #a13c6b;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  scale: 1.2;
+  background: #a13c6b;
+}
+
 .contain {
   @apply max-w-[75rem] mx-auto px-6 py-6;
 }
@@ -43,7 +128,7 @@ html {
 
 .scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #3a0ca3 transparent;
+  scrollbar-color: var(--primary) transparent;
 }
 
 .hideScrollBar::-webkit-scrollbar {
