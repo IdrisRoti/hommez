@@ -20,7 +20,7 @@ const HomeTypeModal = ({showModal, setShowModal}: THomeTypeModal) => {
 
     const router = useRouter(); 
 
-    const {selectedHomeTypes, setSelectedHomeTypes, search, bedsValue, bathsValue, propertyType, priceRange, setPriceRange} = useContext(PropertyListContext)
+    const {selectedHomeTypes, setSelectedHomeTypes, search, bedsValue, bathsValue, propertyType, priceRange} = useContext(PropertyListContext)
 
     const applyFilter = () => {
         router.push(`?${new URLSearchParams({ 
