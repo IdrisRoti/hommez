@@ -91,7 +91,7 @@ export default function TestimonialCarousel({slideIndex, setSlideIndex}: Testimo
                                         <MdOutlineStar key={i} className="text-[#FFC700] size-4" />
                                     ))}
                                     <MdOutlineStar className="text-textGray size-4" />
-                            </div>
+                                </div>
                             </div>
                         </div>
                     </article>

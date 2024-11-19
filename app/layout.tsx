@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google"
+
 import "./globals.css";
 import PropertyListProvider from "@/providers/PropertyListProvider";
 import Footer from "@/components/Footer";

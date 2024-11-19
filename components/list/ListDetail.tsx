@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Link from 'next/link';
 
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
@@ -12,9 +12,12 @@ import { HiArrowLongLeft, HiPhoto } from "react-icons/hi2";
 
 import Amenities from './Amenities';
 import ContactSection from './ContactSection';
+import PropertyListContext from '@/context/PropertyListContext';
 
 const ListDetail = () => {
   const [clampTexts, setClampTexts] = useState(true);
+
+  const {setShowImages} = useContext(PropertyListContext)
   const router = useRouter();
 
   return (
@@ -85,7 +88,9 @@ const ListDetail = () => {
         {/* ********* IMAGES ************** */}
         <section className='contain mt-8'>
           <div className='flex flex-col md:flex-row items-center gap-6'>
-            <div className='h-[15rem] w-full relative group'>
+            <div 
+              onClick={() => setShowImages(true)}
+              className='h-[15rem] w-full relative group'>
               <Image
                 src="/home1.jpg"
                 alt=""
@@ -100,7 +105,9 @@ const ListDetail = () => {
                   </button>
               </div>
             </div>
-            <div className='h-[15rem] w-full relative group'>
+            <div 
+              onClick={() => setShowImages(true)}
+              className='h-[15rem] w-full relative group'>
               <Image
                 src="/home2.jpg"
                 alt=""

@@ -13,6 +13,9 @@ type TPropertyListContext = {
     setBathsValue: Dispatch<SetStateAction<string | null>>;
     selectedHomeTypes: string[];
     setSelectedHomeTypes: Dispatch<SetStateAction<string[]>>;
+    
+    showImages: boolean;
+    setShowImages: Dispatch<SetStateAction<boolean>>;
 }
 
 const PropertyListContext = createContext<TPropertyListContext>({
@@ -27,7 +30,10 @@ const PropertyListContext = createContext<TPropertyListContext>({
     bathsValue: "",
     setBathsValue: () => null,
     selectedHomeTypes: [],
-    setSelectedHomeTypes: () => null
+    setSelectedHomeTypes: () => null,
+
+    showImages: false,
+    setShowImages: () => null
 })
 
 export default PropertyListContext;
