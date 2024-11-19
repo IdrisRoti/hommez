@@ -1,6 +1,6 @@
 "use client"
 
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 
 import ListDetail from '@/components/list/ListDetail';
 import ListHeader from '@/components/list/ListHeader';
