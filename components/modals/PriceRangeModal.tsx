@@ -52,7 +52,7 @@ const PriceRangeModal = ({showModal, setShowModal}: TPriceRangeModal) => {
             <button onClick={clearFilter}><BiX className='size-6 text-textlight' /></button>
         </div>
         <div className=''>
-            <span>Max of <span className='font-serif'>{Number(priceRange) / 1000}</span>K</span>
+            {priceRange ? (<span>Max of <span className='font-serif'>{Number(priceRange) / 1000}</span>K</span>) : (<span className='font-serif'>No Max</span>)}
         </div>
         <div className='mt-14'>
             <input step={1000} className='w-full' value={priceRange ?? "1000"} onChange={(e) => setPriceRange(e.target.value)} min={1000} max={100000} type="range" />
