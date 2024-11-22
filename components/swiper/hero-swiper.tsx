@@ -54,7 +54,7 @@ export default function HeroSwiperCarousel() {
         setDragging(true)} 
         onMouseLeave={()=> 
         setDragging(false)} 
-        className='sm:w-[80%] max-lg:sm:mx-auto lg:w-[36rem] w-full relative'>
+        className='w-full sm:w-[80%] max-lg:sm:mx-auto lg:w-[36rem] relative'>
         <div className="w-full overflow-hidden">
             <motion.div
                 drag="x"
