@@ -38,7 +38,7 @@ const Filters = ({bath,bed,homeTypes,maxprice}: TFilters) => {
 
   return (
     <div className='w-full'>
-       <div className='w-full flex items-center lg:justify-center gap-2 overflow-auto scroll-bar-x [mask-image:linear-gradient(to_right,black_5%,black_90%,transparent)]'>
+       <div className='w-full flex items-center lg:justify-center gap-2 overflow-auto md:scroll-bar-x [mask-image:linear-gradient(to_right,black_5%,black_90%,transparent)]'>
             <div className='flex items-center'>               
                 {
                     propertyTypeArr.map((type) => {

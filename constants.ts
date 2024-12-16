@@ -1,6 +1,12 @@
 import { BsSearch } from "react-icons/bs";
 import { GoHomeFill } from "react-icons/go";
 import { LuBed } from "react-icons/lu";
+import { BsCart2 } from "react-icons/bs";
+import { TfiKey } from "react-icons/tfi";
+import { PiBuildingApartmentLight } from "react-icons/pi";
+import { AiOutlineApartment } from "react-icons/ai";
+import { AiOutlineHome } from "react-icons/ai";
+import { MdOutlineLandscape } from "react-icons/md";
 
 export const NavLinks = [
     {
@@ -167,3 +173,51 @@ export const discoveryLinks = ["Canada", "United States", "Germany", "Nigeria", 
 export const propertyTypeArr = ["Buy", "Rent"] as const
 
 export const homeTypes = ["Apartments", "Condominiums", "Co-Op Properties", "Fractional Ownership", "Duplex Homes", "Farm and Ranch Properties", "Land", "Multi Family Homes", "Single Family Homes", "Private Islands", "Townhouse"]
+
+
+
+
+
+
+
+// CONSTANTS FOR ADDING NEW PROPERTY LIST
+
+export const propertyOfferType = [
+    {
+        id: 1,
+        type: "Sell",
+        subHead: "Put your house up for permanant sale",
+        icon: BsCart2,
+    },
+    {
+        id: 2,
+        type: "Rent",
+        subHead: "Temporarily give your house out at a price",
+        icon: TfiKey,
+    },
+]
+
+export const propertyType = [
+    {
+        id: 1,
+        type: "House",
+        icon: AiOutlineHome,
+    },
+    {
+        id: 2,
+        type: "Apartment",
+        icon: PiBuildingApartmentLight,
+    },
+    {
+        id: 3,
+        type: "Land",
+        icon: MdOutlineLandscape,
+    },
+]
+
+// export const propertyDetails = [
+//     {
+//         id: 1,
+
+//     }
+// ]

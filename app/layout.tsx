@@ -23,8 +23,8 @@ export default function RootLayout({
         className={`${poppins.className} antialiased`}
       >
         <PropertyListProvider>
-            {children}
-            <Footer />
+              {children}
+              <Footer />
         </PropertyListProvider>
       </body>
     </html>
