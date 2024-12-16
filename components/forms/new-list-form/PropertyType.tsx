@@ -1,5 +1,5 @@
 import CustomSelect from "@/components/CustomSelect"
-import { propertyOfferType, propertyType } from "@/constants"
+import {  propertyType } from "@/constants"
 import { TpropertyDetails } from "./CreateNewListForm"
 
 type TPropertyType = {
