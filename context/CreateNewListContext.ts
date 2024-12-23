@@ -15,6 +15,7 @@ export const CreateNewListContext = createContext<TCreateNewListContext>({
             noOfBaths: 1,
         },
         amenities: [],
+        propertyName: ""
     },
     dispatch: () => null
 })
