@@ -44,17 +44,19 @@ const PropertyDetails = () => {
               placeholder='eg: Pool, Tennis Court, Gym, Doorman etc...' 
               type="text" />
             <button
-              onClick={() => dispatch({ type: "ADD_AMENITY", payload: newAmenity})}
+              onClick={() => dispatch({ type: "ADD_AMENITY", payload: { action: "ADD", amenity: newAmenity}})}
               className='h-full px-4 bg-brightPink text-white text-sm  rounded-r-lg hover:opacity-70 transition'>Add</button>
           </div>
           <div className="mt-4 flex items-center gap-3 flex-wrap">
             
               {
                 state.amenities.map((amenity, i) => (
-                  <div key={i} className="relative px-4 py-1.5 text-xs rounded-lg border-2 group cursor-pointer">
+                  <div 
+                    onClick={() => dispatch({ type: "ADD_AMENITY", payload: { action: "REMOVE", amenity: amenity}})}
+                    key={i} 
+                    className="relative px-4 py-1.5 text-xs rounded-lg border-2 group cursor-pointer">
                     <span>{amenity}</span>
                     <div
-                 
                       className="bg-[#1e1e1e]/80 text-white rounded-md py-1.5 px-2 text-[10px] absolute -top-8 whitespace-nowrap hidden group-hover:block transition">
                       Tap to remove
                     </div>

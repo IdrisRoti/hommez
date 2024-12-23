@@ -2,7 +2,7 @@
 
 import { CreateNewListContext } from '@/context/CreateNewListContext'
 import { useReducer } from 'react';
-import { TAmenitiesAction, TNumberOfBathsAction, TNumberOfBedsAction, TOfferTypeAction, TPropertyTypeAction } from './actionTypes';
+import { TAmenitiesAction, TNumberOfBathsAction, TNumberOfBedsAction, TOfferTypeAction, TPropertyNameAction, TPropertyTypeAction } from './actionTypes';
 
 export type InitialStateType = {
   selectedOfferType: string;
@@ -12,9 +12,10 @@ export type InitialStateType = {
     noOfBaths: number;
   };
   amenities: string[];
+  propertyName: string;
 }
 
-export type ActionType = TOfferTypeAction | TPropertyTypeAction | TNumberOfBedsAction | TNumberOfBathsAction | TAmenitiesAction
+export type ActionType = TOfferTypeAction | TPropertyTypeAction | TNumberOfBedsAction | TNumberOfBathsAction | TAmenitiesAction | TPropertyNameAction
   
   const initialState = {
     selectedOfferType: "Sell",
@@ -23,7 +24,8 @@ export type ActionType = TOfferTypeAction | TPropertyTypeAction | TNumberOfBedsA
       noOfBeds: 1,
       noOfBaths: 1
     },
-    amenities: []
+    amenities: [],
+    propertyName: ""
   }
    
   const reducer = (state: InitialStateType, action: ActionType) => {
@@ -49,7 +51,14 @@ export type ActionType = TOfferTypeAction | TPropertyTypeAction | TNumberOfBedsA
         }
 
       case "ADD_AMENITY":
-      return {...state, amenities: [...state.amenities, action.payload]}
+        if(action.payload.action === "ADD") {
+          return {...state, amenities: [...state.amenities, action.payload.amenity]}
+        } else if (action.payload.action === "REMOVE") {
+          return {...state, amenities: state.amenities.filter((amenity) => amenity !== action.payload.amenity)}
+        }
+
+      case "ADD_PROPERTY_NAME":
+        return {...state, propertyName: action.payload as string}
 
       default:
         return state;

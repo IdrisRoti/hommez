@@ -24,5 +24,13 @@ export type TNumberOfBathsAction = {
 
 export type TAmenitiesAction ={
     type: "ADD_AMENITY";
-    payload: string;
+    payload: {
+        action: 'ADD' | "REMOVE",
+        amenity: string,
+    };
   }
+
+export type TPropertyNameAction = {
+    type: "ADD_PROPERTY_NAME",
+    payload: string;
+}

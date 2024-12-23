@@ -1,10 +1,17 @@
+"use client"
+
 import { BiHome } from 'react-icons/bi'
+
+import { useContext } from 'react';
 
 import OfferType from './OfferType'
 import PropertyType from './PropertyType';
 import PropertyDetails from './PropertyDetails';
+import PropertyName from './PropertyName';
+import { CreateNewListContext } from '@/context/CreateNewListContext';
 
 const CreateNewListForm = () => {
+  const {state} = useContext(CreateNewListContext)
 
   return (
     <div className=''>
@@ -15,6 +22,9 @@ const CreateNewListForm = () => {
       <OfferType  />
       <PropertyType  />
       <PropertyDetails  />
+      <PropertyName />
+
+      <button onClick={() =>console.log(state)}>Submit</button>
     </div>
   )
 }

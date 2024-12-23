@@ -42,7 +42,7 @@ const [scope, animate] = useAnimate()
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 onClick={closeDrawer} 
-                className="bg-white/20 backdrop-blur-[2px] fixed inset-0 z-[999]"
+                className="bg-white/20 backdrop-blur-[4px] fixed inset-0 z-[999]"
             >
                 <motion.div
                     id="drawer"
@@ -85,7 +85,7 @@ const [scope, animate] = useAnimate()
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 onClick={closeDrawer} 
-                className="bg-black/20 backdrop-blur-[2px] fixed inset-0 z-[999]"
+                className="bg-white/20 backdrop-blur-[4px] fixed inset-0 z-[999]"
             >
                 <motion.div
                     id= "drawer"
