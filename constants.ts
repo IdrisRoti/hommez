@@ -195,7 +195,7 @@ export const propertyOfferType = [
         subHead: "Temporarily give your house out at a price",
         icon: TfiKey,
     },
-]
+] as const
 
 export const propertyType = [
     {
@@ -213,7 +213,7 @@ export const propertyType = [
         type: "Land",
         icon: MdOutlineLandscape,
     },
-]
+] as const
 
 // export const propertyDetails = [
 //     {
