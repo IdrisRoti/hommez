@@ -3,10 +3,6 @@ import { GoHomeFill } from "react-icons/go";
 import { LuBed } from "react-icons/lu";
 import { BsCart2 } from "react-icons/bs";
 import { TfiKey } from "react-icons/tfi";
-import { PiBuildingApartmentLight } from "react-icons/pi";
-import { AiOutlineApartment } from "react-icons/ai";
-import { AiOutlineHome } from "react-icons/ai";
-import { MdOutlineLandscape } from "react-icons/md";
 
 export const NavLinks = [
     {
@@ -196,28 +192,3 @@ export const propertyOfferType = [
         icon: TfiKey,
     },
 ] as const
-
-export const propertyType = [
-    {
-        id: 1,
-        type: "House",
-        icon: AiOutlineHome,
-    },
-    {
-        id: 2,
-        type: "Apartment",
-        icon: PiBuildingApartmentLight,
-    },
-    {
-        id: 3,
-        type: "Land",
-        icon: MdOutlineLandscape,
-    },
-] as const
-
-// export const propertyDetails = [
-//     {
-//         id: 1,
-
-//     }
-// ]

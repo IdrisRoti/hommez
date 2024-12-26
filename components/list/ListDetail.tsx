@@ -89,7 +89,6 @@ const ListDetail = () => {
         <section className='contain mt-8'>
           <div className='flex flex-col md:flex-row items-center gap-6'>
             <div 
-              onClick={() => setShowImages(true)}
               className='h-[15rem] w-full relative group'>
               <Image
                 src="/home1.jpg"
@@ -97,8 +96,10 @@ const ListDetail = () => {
                 fill
                 className='object-cover'
               />
-              <div className='absolute inset-0 bg-black/20 backdrop-blur-[5px] grid place-items-center opacity-0 group-hover:opacity-100 transition duration-500'>
+              <div
+                className='absolute inset-0 bg-black/20 backdrop-blur-[5px] grid place-items-center opacity-0 group-hover:opacity-100 transition duration-500'>
                   <button 
+                      onClick={() => setShowImages(true)} 
                       className='py-1.5 px-4 bg-white hover:bg-primary hover:text-white border border-primary flex items-center gap-2 justify-center opacity-0 group-hover:opacity-100 translate-y-20 group-hover:translate-y-0 transition duration-500' >
                         <HiPhoto className='text-textlighter size-4 hover:text-white transition'/>
                         <span className="uppercase tracking-widest text-[10px] font-semibold hover:text-white transition">View more photos</span>
@@ -106,7 +107,6 @@ const ListDetail = () => {
               </div>
             </div>
             <div 
-              onClick={() => setShowImages(true)}
               className='h-[15rem] w-full relative group'>
               <Image
                 src="/home2.jpg"
@@ -114,8 +114,10 @@ const ListDetail = () => {
                 fill
                 className='object-cover'
               />
-              <div className='absolute inset-0 bg-black/20 backdrop-blur-[5px] grid place-items-center opacity-0 group-hover:opacity-100 transition duration-500'>
+              <div
+                className='absolute inset-0 bg-black/20 backdrop-blur-[5px] grid place-items-center opacity-0 group-hover:opacity-100 transition duration-500'>
                   <button 
+                      onClick={() => setShowImages(true)}                  
                       className='py-1.5 px-4 bg-white hover:bg-primary hover:text-white border border-primary flex items-center gap-2 justify-center opacity-0 group-hover:opacity-100 translate-y-20 group-hover:translate-y-0 transition duration-500 ' >
                         <HiPhoto className='text-textlighter size-4 hover:text-white transition'/>
                         <span className="uppercase tracking-widest text-[10px] font-semibold hover:text-white transition">View more photos</span>

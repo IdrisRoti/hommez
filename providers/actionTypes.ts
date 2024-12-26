@@ -5,7 +5,7 @@ export type TOfferTypeAction = {
 
 export type TPropertyTypeAction = {
     type: "SELECT_PROPERTY_TYPE";
-    payload: "House" | "Apartment" | "Land";
+    payload: string;
 }
 
 export type TNumberOfBedsAction = {
@@ -32,5 +32,10 @@ export type TAmenitiesAction ={
 
 export type TPropertyNameAction = {
     type: "ADD_PROPERTY_NAME",
+    payload: string;
+}
+
+export type TPropertyPriceAction = {
+    type: "ADD_PROPERTY_PRICE",
     payload: string;
 }

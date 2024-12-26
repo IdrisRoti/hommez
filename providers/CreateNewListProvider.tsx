@@ -2,7 +2,7 @@
 
 import { CreateNewListContext } from '@/context/CreateNewListContext'
 import { useReducer } from 'react';
-import { TAmenitiesAction, TNumberOfBathsAction, TNumberOfBedsAction, TOfferTypeAction, TPropertyNameAction, TPropertyTypeAction } from './actionTypes';
+import { TAmenitiesAction, TNumberOfBathsAction, TNumberOfBedsAction, TOfferTypeAction, TPropertyNameAction, TPropertyPriceAction, TPropertyTypeAction } from './actionTypes';
 
 export type InitialStateType = {
   selectedOfferType: string;
@@ -13,19 +13,21 @@ export type InitialStateType = {
   };
   amenities: string[];
   propertyName: string;
+  propertyPrice: string;
 }
 
-export type ActionType = TOfferTypeAction | TPropertyTypeAction | TNumberOfBedsAction | TNumberOfBathsAction | TAmenitiesAction | TPropertyNameAction
+export type ActionType = TOfferTypeAction | TPropertyTypeAction | TNumberOfBedsAction | TNumberOfBathsAction | TAmenitiesAction | TPropertyNameAction | TPropertyPriceAction
   
   const initialState = {
     selectedOfferType: "Sell",
-    propertyType: "House",
+    propertyType: "Apartments",
     propertyDetails: {
       noOfBeds: 1,
       noOfBaths: 1
     },
     amenities: [],
-    propertyName: ""
+    propertyName: "",
+    propertyPrice: "",
   }
    
   const reducer = (state: InitialStateType, action: ActionType) => {
@@ -59,6 +61,9 @@ export type ActionType = TOfferTypeAction | TPropertyTypeAction | TNumberOfBedsA
 
       case "ADD_PROPERTY_NAME":
         return {...state, propertyName: action.payload as string}
+
+      case "ADD_PROPERTY_PRICE":
+        return {...state, propertyPrice: action.payload}
 
       default:
         return state;

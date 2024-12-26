@@ -1,4 +1,4 @@
-import { ActionType, InitialStateType } from "@/providers/TCreateNewListProvider";
+import { ActionType, InitialStateType } from "@/providers/CreateNewListProvider";
 import { createContext, Dispatch } from "react";
 
 type TCreateNewListContext = {
@@ -15,7 +15,8 @@ export const CreateNewListContext = createContext<TCreateNewListContext>({
             noOfBaths: 1,
         },
         amenities: [],
-        propertyName: ""
+        propertyName: "",
+        propertyPrice: ""
     },
     dispatch: () => null
 })

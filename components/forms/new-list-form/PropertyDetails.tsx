@@ -11,7 +11,7 @@ const PropertyDetails = () => {
 
   return (
     <div className='mt-4 p-3'>
-        <h2 className='font-medium '>Property  details</h2>
+        <h2 className='font-medium'>Property details</h2>
         <p className='text-sm text-textlight'>Enter the fundamental details about your property.</p>
 
         <div className="flex items-center gap-3 mt-3">
