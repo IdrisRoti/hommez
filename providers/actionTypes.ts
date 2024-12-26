@@ -39,3 +39,16 @@ export type TPropertyPriceAction = {
     type: "ADD_PROPERTY_PRICE",
     payload: string;
 }
+
+export type TPropertyPDescAction = {
+    type: "ADD_PROPERTY_DESCRIPTION",
+    payload: string;
+}
+
+export type TPropertyImagesAction = {
+    type: "ADD_PROPERTY_IMAGES",
+    payload: {
+        url: string,
+        publicId: string
+    };
+}

@@ -11,6 +11,7 @@ import PropertyName from './PropertyName';
 import { CreateNewListContext } from '@/context/CreateNewListContext';
 import PropertyPrice from './PropertyPrice';
 import PropertyPhotos from './PropertyPhotos';
+import PropertyDescription from './PropertyDescription';
 
 const CreateNewListForm = () => {
   const {state} = useContext(CreateNewListContext)
@@ -25,6 +26,7 @@ const CreateNewListForm = () => {
       <PropertyType  />
       <PropertyDetails  />
       <PropertyName />
+      <PropertyDescription />
       <PropertyPhotos />
       <PropertyPrice />
       <button className='py-2 px-6 text-white mt-8 rounded-md bg-brightPink' onClick={() =>console.log(state)}>Submit</button>

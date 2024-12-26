@@ -2,7 +2,7 @@
 
 import { CreateNewListContext } from '@/context/CreateNewListContext'
 import { useReducer } from 'react';
-import { TAmenitiesAction, TNumberOfBathsAction, TNumberOfBedsAction, TOfferTypeAction, TPropertyNameAction, TPropertyPriceAction, TPropertyTypeAction } from './actionTypes';
+import { TAmenitiesAction, TNumberOfBathsAction, TNumberOfBedsAction, TOfferTypeAction, TPropertyImagesAction, TPropertyNameAction, TPropertyPDescAction, TPropertyPriceAction, TPropertyTypeAction } from './actionTypes';
 
 export type InitialStateType = {
   selectedOfferType: string;
@@ -14,9 +14,11 @@ export type InitialStateType = {
   amenities: string[];
   propertyName: string;
   propertyPrice: string;
+  propertyImages: {url: string, publicId: string}[];
+  propertyDesc: string;
 }
 
-export type ActionType = TOfferTypeAction | TPropertyTypeAction | TNumberOfBedsAction | TNumberOfBathsAction | TAmenitiesAction | TPropertyNameAction | TPropertyPriceAction
+export type ActionType = TOfferTypeAction | TPropertyTypeAction | TNumberOfBedsAction | TNumberOfBathsAction | TAmenitiesAction | TPropertyNameAction | TPropertyPriceAction | TPropertyImagesAction | TPropertyPDescAction
   
   const initialState = {
     selectedOfferType: "Sell",
@@ -28,6 +30,8 @@ export type ActionType = TOfferTypeAction | TPropertyTypeAction | TNumberOfBedsA
     amenities: [],
     propertyName: "",
     propertyPrice: "",
+    propertyImages: [],
+    propertyDesc: ""
   }
    
   const reducer = (state: InitialStateType, action: ActionType) => {
@@ -62,8 +66,14 @@ export type ActionType = TOfferTypeAction | TPropertyTypeAction | TNumberOfBedsA
       case "ADD_PROPERTY_NAME":
         return {...state, propertyName: action.payload as string}
 
+      case "ADD_PROPERTY_DESCRIPTION":
+        return {...state, propertyDesc: action.payload}
+
       case "ADD_PROPERTY_PRICE":
         return {...state, propertyPrice: action.payload}
+
+      case "ADD_PROPERTY_IMAGES":
+        return {...state, propertyImages: [...state.propertyImages, action.payload]}
 
       default:
         return state;

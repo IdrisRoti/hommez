@@ -1,8 +1,9 @@
 "use client"
 
+import { CreateNewListContext } from '@/context/CreateNewListContext'
 import { CldUploadButton, CloudinaryUploadWidgetResults } from 'next-cloudinary'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { BiImageAdd, BiX } from 'react-icons/bi'
 import { CiImageOn } from 'react-icons/ci'
 import { toast } from 'sonner'
@@ -15,7 +16,7 @@ type TPropertyImage = {
 const MAX_IMAGES_TO_UPLOAD = 16 
 
 const PropertyPhotos = () => {
-    const [propertyImages, setPropertyImages] = useState<TPropertyImage[]>([])
+    const {state, dispatch} =useContext(CreateNewListContext)
 
     const handleImageUpload = (result: CloudinaryUploadWidgetResults) => {
         const info = result.info as object;
@@ -24,8 +25,8 @@ const PropertyPhotos = () => {
             const url = info.secure_url as string;
             const publicId = info.public_id as string; //The public_id is important to remove image from cloudinary when image is deleted by user
 
-            if(propertyImages.length < 16){
-                setPropertyImages((prev) => [...prev, {url, publicId}])
+            if(state.propertyImages.length < 16){
+                dispatch({ type: "ADD_PROPERTY_IMAGES", payload: {url, publicId} })
             } else {
                 toast("Maximum of 16 images")
                 return;
@@ -36,9 +37,9 @@ const PropertyPhotos = () => {
     }
 
     const removeImage = (url: string) => {
-        setPropertyImages((prevImages) => (
-            prevImages.filter((image) => image.url !== url)
-        ))
+        // setstate.propertyImages((prevImages) => (
+        //     prevImages.filter((image) => image.url !== url)
+        // ))
 
         // TODO - Remove image from cloudinary using public_id
     }
@@ -48,13 +49,13 @@ const PropertyPhotos = () => {
         <h2 className='font-medium'>Property Photos</h2>
         <div className="flex items-center justify-between">
             <p className='text-sm text-textlight'>Upload a minimum of 5 photos</p>
-        { propertyImages.length  > 0 ? <div className="text-brightPink bg-[#f72585]/10 font-semibold text-xs px-3 py-1 rounded-lg">{`${propertyImages.length}/${MAX_IMAGES_TO_UPLOAD}`}</div> : null}
+        { state.propertyImages.length  > 0 ? <div className="text-brightPink bg-[#f72585]/10 font-semibold text-xs px-3 py-1 rounded-lg">{`${state.propertyImages.length}/${MAX_IMAGES_TO_UPLOAD}`}</div> : null}
         </div>
-        {propertyImages.length ? (
-
+        {state.propertyImages.length ? (
+            // PROPERTY IMAGES
             <div className="grid grid-cols-4 gap-3 mt-3">
                 {
-                    propertyImages.slice(0, 16).map(({url}, i) => (
+                    state.propertyImages.slice(0, 16).map(({url}, i) => (
                         <div key={i} className='relative group col-span-2 lg:col-span-1 aspect-square rounded-lg overflow-hidden'>
                             <Image
                                 src={url}
@@ -62,6 +63,7 @@ const PropertyPhotos = () => {
                                 fill
                                 className='object-cover'
                             />
+                            {/* REMOVE IMAGE BUTTON */}
                             <button
                                 onClick={() => removeImage(url)} 
                                 className="z-10 absolute right-2 top-2 bg-white size-6 rounded-md place-items-center shadow-sm hover:opacity-70 transition hidden group-hover:grid"
@@ -72,7 +74,7 @@ const PropertyPhotos = () => {
                     ))
                 }
                 {
-                    propertyImages.length < 16 && (
+                    state.propertyImages.length < 16 && (
                         <CldUploadButton
                             uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET}
                             onSuccess={handleImageUpload}

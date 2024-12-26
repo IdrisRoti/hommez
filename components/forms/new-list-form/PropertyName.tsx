@@ -12,7 +12,7 @@ const PropertyName = () => {
         <p className='text-sm text-textlight'>Write a short and catchy name for your property.</p>
         <textarea 
             onChange={(e) => dispatch({type: "ADD_PROPERTY_NAME", payload: e.target.value})} 
-            className='mt-3 border-[2.5px] rounded-lg p-2 focus:border-brightPink outline-none w-full placeholder:text-xs' 
+            className='mt-3 border-[2.5px] rounded-lg p-2 focus:border-brightPink outline-none w-full placeholder:text-xs bg-transparent' 
             placeholder="Write"></textarea>
     </div>
   )
