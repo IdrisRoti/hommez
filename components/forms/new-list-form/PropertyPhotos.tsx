@@ -18,7 +18,7 @@ const PropertyPhotos = () => {
     const [propertyImages, setPropertyImages] = useState<TPropertyImage[]>([])
 
     const handleImageUpload = (result: CloudinaryUploadWidgetResults) => {
-        const info = result.info as Object;
+        const info = result.info as object;
 
         if("secure_url" in info && "public_id" in info){
             const url = info.secure_url as string;
