@@ -3,15 +3,10 @@
 import { CreateNewListContext } from '@/context/CreateNewListContext'
 import { CldUploadButton, CloudinaryUploadWidgetResults } from 'next-cloudinary'
 import Image from 'next/image'
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { BiImageAdd, BiX } from 'react-icons/bi'
 import { CiImageOn } from 'react-icons/ci'
 import { toast } from 'sonner'
-
-type TPropertyImage = {
-    url:string, 
-    publicId: string
-}
 
 const MAX_IMAGES_TO_UPLOAD = 16 
 
@@ -42,6 +37,7 @@ const PropertyPhotos = () => {
         // ))
 
         // TODO - Remove image from cloudinary using public_id
+        console.log(url)
     }
 
   return (
