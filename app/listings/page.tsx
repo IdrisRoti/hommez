@@ -20,4 +20,4 @@ const ListingsPage = async ({searchParams}: { searchParams: Promise<{[key: strin
   )
 }
 
-export default ListingsPage
+export default ListingsPage;

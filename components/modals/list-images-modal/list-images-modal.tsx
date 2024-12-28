@@ -1,6 +1,6 @@
 "use client"
 
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Image from "next/image";
 
 import { motion } from "framer-motion";
@@ -22,6 +22,29 @@ const ListImagesModal = () => {
         setIsGrid(false);
         setSlideIndex(index)
     }
+
+    const handleSlideChange = (type: "Next" | "Back") => {
+        if(type ==="Next") {
+            setSlideIndex(prev => prev < heroCarouselHomeImages.length - 1 ? prev + 1 : heroCarouselHomeImages.length - 1)
+        }
+
+        if(type === "Back") {
+            setSlideIndex(prev => prev > 0 ? prev - 1 : 0)
+        }
+    }
+
+    useEffect(() => {
+        const handleKeydown = (e: KeyboardEvent) => {
+            if(e.key === "ArrowLeft") handleSlideChange("Back")
+            if(e.key === "ArrowRight") handleSlideChange("Next")
+        }
+
+        if(typeof window !== "undefined"){
+            window.addEventListener("keydown", handleKeydown)
+        }
+
+        return () => window.removeEventListener("keydown", handleKeydown)
+    }, [])
 
   return (
         <motion.div
@@ -83,7 +106,7 @@ const ListImagesModal = () => {
                     {!isGrid && <div className="flex items-center md:gap-5">
                         <button 
                             disabled={slideIndex === 0}
-                            onClick={() => setSlideIndex(prev => prev > 0 ? prev - 1 : 0)}
+                            onClick={() => handleSlideChange("Back")}
                             className="p-2 rotate-180 disabled:opacity-50">
                             <div className="flex items-center w-14 md:w-20 relative"> 
                                 <div className="absolute right-[.5px] h-[1.5px] w-12 md:w-24 bg-textlighter" />
@@ -94,7 +117,7 @@ const ListImagesModal = () => {
                         <span className="font-serif text-white text-lg md:text-2xl">{slideIndex + 1}</span>
                         <button 
                             disabled={slideIndex === heroCarouselHomeImages.length - 1}
-                            onClick={() => setSlideIndex(prev => prev < heroCarouselHomeImages.length - 1 ? prev + 1 : heroCarouselHomeImages.length - 1)}
+                            onClick={() => handleSlideChange("Next")}
                             className="p-2 disabled:opacity-50">
                             <div className="flex items-center w-14 md:w-20 relative"> 
                                 <div className="absolute right-[.5px] h-[1.5px] w-12 md:w-24 bg-textlighter" />

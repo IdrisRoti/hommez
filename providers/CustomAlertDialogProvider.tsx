@@ -39,7 +39,6 @@ const reducer = (state: InitialStateType, action: ActionType) => {
 }
 
 const CustomAlertDialogProvider = ({ children}: {children: React.ReactNode}) => {
-
 const [state, dispatch] = useReducer(reducer, initialState);
 
 const alert = (action: () => void, title?: string, description?: string) => {
@@ -58,4 +57,4 @@ const alert = (action: () => void, title?: string, description?: string) => {
   )
 }
 
-export default CustomAlertDialogProvider
+export default CustomAlertDialogProvider;
