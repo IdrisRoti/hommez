@@ -6,6 +6,7 @@ import PropertyListProvider from "@/providers/PropertyListProvider";
 import Footer from "@/components/Footer";
 import CreateNewListProvider from "@/providers/CreateNewListProvider";
 import { Toaster } from "sonner";
+import CustomAlertDialogProvider from "@/providers/CustomAlertDialogProvider";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "800"]})
 
@@ -24,13 +25,15 @@ export default function RootLayout({
       <body
         className={`${poppins.className} antialiased`}
       >
-        <CreateNewListProvider>
-          <PropertyListProvider>
-                {children}
-                <Footer />
-                <Toaster />
-          </PropertyListProvider>
-        </CreateNewListProvider>
+        <CustomAlertDialogProvider>
+          <CreateNewListProvider>
+            <PropertyListProvider>
+                  {children}
+                  <Footer />
+                  <Toaster />
+            </PropertyListProvider>
+          </CreateNewListProvider>
+        </CustomAlertDialogProvider>
       </body>
     </html>
   );
