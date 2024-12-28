@@ -1,4 +1,3 @@
-import CustomAlertDialog from "@/components/custom-alert-dialog";
 import About from "@/components/landing/About";
 import BecomeAgent from "@/components/landing/BecomeAgent";
 import Customers from "@/components/landing/Customers";

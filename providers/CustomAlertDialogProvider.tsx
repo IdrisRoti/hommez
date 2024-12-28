@@ -2,6 +2,7 @@
 
 import CustomAlertDialog from '@/components/custom-alert-dialog';
 import CustomAlertDialogContext from '@/context/CustomAlertDialogContext'
+import { AnimatePresence } from 'framer-motion';
 import { useReducer } from 'react'
 
 type InitialStateType = {
@@ -47,7 +48,11 @@ const alert = (action: () => void, title?: string, description?: string) => {
 
   return (
     <CustomAlertDialogContext.Provider value={{ state, dispatch, alert }}>
-        {state.showDialog && <CustomAlertDialog title={state.title} description={state.description} action={state.action} />}
+        <AnimatePresence>
+            {state.showDialog && (
+                <CustomAlertDialog title={state.title} description={state.description} action={state.action} />
+            )}
+        </AnimatePresence>
                 {children}
     </CustomAlertDialogContext.Provider>
   )

@@ -1,6 +1,7 @@
 "use client"
 
 import { CreateNewListContext } from '@/context/CreateNewListContext'
+import CustomAlertDialogContext from '@/context/CustomAlertDialogContext'
 import { CldUploadButton, CloudinaryUploadWidgetResults } from 'next-cloudinary'
 import Image from 'next/image'
 import React, { useContext } from 'react'
@@ -12,6 +13,7 @@ const MAX_IMAGES_TO_UPLOAD = 16
 
 const PropertyPhotos = () => {
     const {state, dispatch} =useContext(CreateNewListContext)
+    const {alert} = useContext(CustomAlertDialogContext)
 
     const handleImageUpload = (result: CloudinaryUploadWidgetResults) => {
         const info = result.info as object;
@@ -61,7 +63,7 @@ const PropertyPhotos = () => {
                             />
                             {/* REMOVE IMAGE BUTTON */}
                             <button
-                                onClick={() => removeImage(url)} 
+                                onClick={() => alert(() => removeImage(url), "Are you sure you want to remove this image?")} 
                                 className="z-10 absolute right-2 top-2 bg-white size-6 rounded-md place-items-center shadow-sm hover:opacity-70 transition hidden group-hover:grid"
                             >
                                 <BiX className="size-4" />

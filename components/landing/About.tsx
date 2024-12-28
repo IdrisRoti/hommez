@@ -5,9 +5,8 @@ import Image from "next/image";
 import GradientBall from "../gradient-ball";
 import AboutUsCards from "./AboutUsCards";
 import CircularText from "../circular-text";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import CustomAlertDialogContext from "@/context/CustomAlertDialogContext";
 
 export default function About() {
     const [windowWindth, setWindowWidth] = useState<number>()
@@ -17,8 +16,6 @@ export default function About() {
             setWindowWidth(window.innerWidth)
         }
     }, [])
-
-    const {alert} = useContext(CustomAlertDialogContext)
 
   return (
     <section id="about" className="contain mt-14 md:mt-32">
