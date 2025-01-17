@@ -114,13 +114,9 @@ export default function Header({className}:{className?: string}) {
             <CreateNewListForm />
         </CustomDrawer>
     </div>
-    {
-        openSignUpModal && (
-            <CustomModal closeModal={closeSignUpModal} showModal={openSignUpModal}>
-                <SignUpModal />
-            </CustomModal>
-        )
-    }
+    <CustomModal closeModal={closeSignUpModal} showModal={openSignUpModal}>
+        <SignUpModal />
+    </CustomModal>
     </>
   )
 }
