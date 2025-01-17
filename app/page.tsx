@@ -12,6 +12,7 @@ import Testimonials from "@/components/landing/Testimonials";
 import TrustedBy from "@/components/landing/TrustedBy";
 
 export default function Home() {
+
   return (
     <div className="relative">
       <div className="h-[120rem] lg:h-[113rem] w-full absolute -top-[60rem] sm:-top-[48rem] lg:-top-[57rem] -z-10 rounded-full bg-gradient-to-b from-white from-50% to-secondary opacity-30" />

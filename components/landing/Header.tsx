@@ -16,6 +16,8 @@ import MobileNav from "../MobileNav";
 import HamburgerMenu from "../HamburgerMenu";
 import CustomDrawer from "../CustomDrawer";
 import CreateNewListForm from "../forms/new-list-form/CreateNewListForm";
+import SignUpModal from "../modals/SignUpModal";
+import CustomModal from "../custom-modal";
 
 
 export default function Header({className}:{className?: string}) {
@@ -23,6 +25,9 @@ export default function Header({className}:{className?: string}) {
     const [showMobileMenu, setShowMobileMenu] = useState(false)
 
     const [openNewListDrawer, setOpenNewListDrawer] = useState(false);
+
+    const [openSignUpModal, setOpenSignUpModal] = useState(false);
+    const closeSignUpModal = () => setOpenSignUpModal(false)
 
   return (
     <>
@@ -75,7 +80,9 @@ export default function Header({className}:{className?: string}) {
                         <h2 className="font-semibold text-[#1e1e1e] text-xl">Hommez</h2>
                     </div>
                     <div className="hidden lg:flex items-center gap-2">
-                        <button className="px-4 py-1 flex items-center gap-2">
+                        <button 
+                            onClick={() => setOpenSignUpModal(true)}
+                            className="px-4 py-1 flex items-center gap-2">
                             <HiOutlineUserCircle className="w-5 h-5" />
                             <span>Login/Register</span>
                         </button>
@@ -95,16 +102,25 @@ export default function Header({className}:{className?: string}) {
                     }
             </nav>
     </header>
+    {/* Drawer for large screens */}
     <div className="hidden md:block">
         <CustomDrawer position="right" isOpen={openNewListDrawer} setIsOpen={setOpenNewListDrawer}>
             <CreateNewListForm />
         </CustomDrawer>
     </div>
+    {/* Drawer for mobile screens */}
     <div className="md:hidden">
         <CustomDrawer position="bottom" isOpen={openNewListDrawer} setIsOpen={setOpenNewListDrawer}>
             <CreateNewListForm />
         </CustomDrawer>
     </div>
+    {
+        openSignUpModal && (
+            <CustomModal closeModal={closeSignUpModal} showModal={openSignUpModal}>
+                <SignUpModal />
+            </CustomModal>
+        )
+    }
     </>
   )
 }

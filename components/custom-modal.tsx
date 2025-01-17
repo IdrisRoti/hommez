@@ -5,16 +5,19 @@ import { AnimatePresence, motion } from 'framer-motion';
 type TModal = {
     children: React.ReactNode;
     showModal: boolean;
+    closeModal?: () => void;
     className?: string;
 }
 
-const CustomModal = ({children, showModal, className}: TModal) => {
+const CustomModal = ({children, showModal, closeModal, className}: TModal) => {
 
   return (
     <AnimatePresence>
       {showModal && (
-        <div className='fixed inset-0 w-screen h-screen z-[900] bg-black/30 backdrop-blur-[2px] grid place-items-center'>
-          <div className='cursor-not-allowed pointer-events-none'>
+        <div 
+          {...(closeModal && {onClick: closeModal})}
+          className='fixed inset-0 w-screen h-screen z-[1000] bg-black/30 backdrop-blur-[2px] grid place-items-center'>
+          <div onClick={(e) => e.stopPropagation()} className='cursor-not-allowed pointer-events-none'>
             <motion.aside
               initial={{ opacity: 0}}
               animate={{ opacity: 1}}
