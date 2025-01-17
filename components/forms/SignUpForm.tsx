@@ -15,7 +15,12 @@ const formSchema = z.object({
     password: z.string().min(8, "Minimum of 8 characters")
 })
 
-const SignUpForm = () => { 
+type TSignUpForm = {
+    closeSignUpModal: () => void;
+    openLogInModal: () => void;
+}
+
+const SignUpForm = ({closeSignUpModal, openLogInModal}: TSignUpForm) => { 
     const [strengthScore, setStrengthScore] =useState(0)
 
     type signUpFormType = z.infer<typeof formSchema>;
@@ -56,6 +61,11 @@ const SignUpForm = () => {
         checkPasswordStrength(password)
      }, [password])
 
+     const handleOpenLogInModal = () => {
+        closeSignUpModal();
+        
+        openLogInModal();
+     }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -85,7 +95,7 @@ const SignUpForm = () => {
         </div>
         <div className="flex flex-col gap-2 w-full mt-4">
             <label className="text-sm font-medium" htmlFor="firstname">Email<span className="text-red-600">*</span></label>
-            <input {...register("email")} type="email" className="bg-transparent outline-none border-2 border-[#1e1e1e]/15 focus:border-primary px-2 py-1.5 rounded-lg placeholder:text-sm placeholder:font-semibold focus:placeholder:opacity-0 placeholder:transition placeholder:duration-500 w-full" placeholder="Your last name" />
+            <input {...register("email")} type="email" className="bg-transparent outline-none border-2 border-[#1e1e1e]/15 focus:border-primary px-2 py-1.5 rounded-lg placeholder:text-sm placeholder:font-semibold focus:placeholder:opacity-0 placeholder:transition placeholder:duration-500 w-full" placeholder="Your email address" />
             {
                     errors.email && 
                         <div className="flex items-center gap-1">
@@ -107,11 +117,11 @@ const SignUpForm = () => {
                 }
         </div>
         <div className="w-full flex border-t mt-6 p-3">
-            <button className="bg-primary hover:bg-primary/60 transition px-3 py-2 rounded-lg font-semibold ml-auto text-sm text-white">Create Profile</button>
+            <button className="bg-primary hover:bg-primary/60 transition px-3 py-2 rounded-lg font-semibold ml-auto text-sm text-white w-full">Create Profile</button>
         </div>
         <div className="flex items-center justify-center gap-2">
             <p>Already have an account? </p>
-            <button className="font-semibold text-primary">Log in</button>
+            <button type="button" onClick={handleOpenLogInModal} className="font-semibold text-primary">Log in</button>
         </div>
     </form>
   )

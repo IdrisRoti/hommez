@@ -10,7 +10,7 @@ import { IoCallOutline } from "react-icons/io5";
 import { PiWarehouseDuotone } from "react-icons/pi";
 import { HiOutlineUserCircle } from "react-icons/hi2";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import MobileNav from "../MobileNav";
 import HamburgerMenu from "../HamburgerMenu";
@@ -18,6 +18,7 @@ import CustomDrawer from "../CustomDrawer";
 import CreateNewListForm from "../forms/new-list-form/CreateNewListForm";
 import SignUpModal from "../modals/SignUpModal";
 import CustomModal from "../custom-modal";
+import LogInModal from "../modals/LogInModal";
 
 
 export default function Header({className}:{className?: string}) {
@@ -27,7 +28,12 @@ export default function Header({className}:{className?: string}) {
     const [openNewListDrawer, setOpenNewListDrawer] = useState(false);
 
     const [openSignUpModal, setOpenSignUpModal] = useState(false);
+    const openSignUpModalFunc = () => setOpenSignUpModal(true)
     const closeSignUpModal = () => setOpenSignUpModal(false)
+    
+    const [openLogInModal, setOpenLogInModal] = useState(false);
+    const openLogInModalFunc = () => setOpenLogInModal(true)
+    const closeLogInModal = () => setOpenLogInModal(false)
 
   return (
     <>
@@ -97,9 +103,11 @@ export default function Header({className}:{className?: string}) {
                         <div className="lg:hidden" onClick={() => setShowMobileMenu(prev=>!prev)}>
                             <HamburgerMenu showMobileMenu={showMobileMenu}/>
                         </div>
-                        {
-                                showMobileMenu && <MobileNav setOpenNewListDrawer={setOpenNewListDrawer} setShowMobileMenu={setShowMobileMenu} />
-                    }
+                        <AnimatePresence>
+                            {
+                                showMobileMenu && <MobileNav setOpenNewListDrawer={setOpenNewListDrawer} setShowMobileMenu={setShowMobileMenu} openSignUpModal={openSignUpModalFunc} />
+                            }
+                        </AnimatePresence>
             </nav>
     </header>
     {/* Drawer for large screens */}
@@ -115,7 +123,10 @@ export default function Header({className}:{className?: string}) {
         </CustomDrawer>
     </div>
     <CustomModal closeModal={closeSignUpModal} showModal={openSignUpModal}>
-        <SignUpModal />
+        <SignUpModal closeSignUpModal={closeSignUpModal} openLogInModal={openLogInModalFunc} />
+    </CustomModal>
+    <CustomModal closeModal={closeLogInModal} showModal={openLogInModal}>
+        <LogInModal closeLogInModal={closeLogInModal} openSignUpModal={openSignUpModalFunc}  />
     </CustomModal>
     </>
   )
