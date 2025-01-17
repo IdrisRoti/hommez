@@ -109,6 +109,10 @@ const SignUpForm = () => {
         <div className="w-full flex border-t mt-6 p-3">
             <button className="bg-primary hover:bg-primary/60 transition px-3 py-2 rounded-lg font-semibold ml-auto text-sm text-white">Create Profile</button>
         </div>
+        <div className="flex items-center justify-center gap-2">
+            <p>Already have an account? </p>
+            <button className="font-semibold text-primary">Log in</button>
+        </div>
     </form>
   )
 }
